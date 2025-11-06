@@ -19,13 +19,14 @@
             </div>
             <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="properties.html">Properties</a></li>
-                <li><a href="communities.html">Communities</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="why-dubai.html">Why Dubai</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="properties.html" data-i18n="nav.properties">Properties</a></li>
+                <li><a href="communities.html" data-i18n="nav.communities">Communities</a></li>
+                <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="why-dubai.html" data-i18n="nav.whyDubai">Why Dubai</a></li>
+                <li><a href="about.html" data-i18n="nav.about">About</a></li>
                 <li><a href="contact.html" class="btn-contact active">Contact Us</a></li>
+                            <li><button id="langToggle" class="lang-toggle">العربية</button></li>
             </ul>
         </div>
     </nav>
@@ -184,10 +185,11 @@
                     <ul>
                         <li><a href="properties.html">Buy Property</a></li>
                         <li><a href="properties.html?type=rent">Rent Property</a></li>
-                        <li><a href="communities.html">Communities</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="why-dubai.html">Why Dubai</a></li>
-                    </ul>
+                        <li><a href="communities.html" data-i18n="nav.communities">Communities</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                        <li><a href="why-dubai.html" data-i18n="nav.whyDubai">Why Dubai</a></li>
+                                    <li><button id="langToggle" class="lang-toggle">العربية</button></li>
+            </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Company</h4>
@@ -197,7 +199,8 @@
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Service</a></li>
-                    </ul>
+                                    <li><button id="langToggle" class="lang-toggle">العربية</button></li>
+            </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Contact Info</h4>
@@ -206,13 +209,16 @@
                         <li><i class="fas fa-phone"></i> +971 50 123 4567</li>
                         <li><i class="fas fa-envelope"></i> info@dubaiestates.ae</li>
                         <li><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</li>
-                    </ul>
+                                    <li><button id="langToggle" class="lang-toggle">العربية</button></li>
+            </ul>
                 </div>
             </div>
             <div class="footer-bottom"><p>&copy; 2024 Dubai Estates. All rights reserved.</p></div>
         </div>
     </footer>
+    <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/translations.js"></script>
     <script src="js/contact.js"></script>
 </body>
 </html>

@@ -28,13 +28,14 @@
                 <span></span>
             </button>
             <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="properties.html">Properties</a></li>
-                <li><a href="communities.html">Communities</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="why-dubai.html">Why Dubai</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="btn-contact">Contact Us</a></li>
+                <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
+                <li><a href="properties.html" data-i18n="nav.properties">Properties</a></li>
+                <li><a href="communities.html" data-i18n="nav.communities">Communities</a></li>
+                <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="why-dubai.html" data-i18n="nav.whyDubai">Why Dubai</a></li>
+                <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                <li><a href="contact.html" class="btn-contact" data-i18n="nav.contact">Contact Us</a></li>
+                <li><button id="langToggle" class="lang-toggle">العربية</button></li>
             </ul>
         </div>
     </nav>
@@ -43,8 +44,8 @@
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h2>Discover Your Dream Property in Dubai</h2>
-            <p>Exclusive access to Dubai's finest residential and investment properties</p>
+            <h2 data-i18n="hero.title">Discover Your Dream Property in Dubai</h2>
+            <p data-i18n="hero.subtitle">Exclusive access to Dubai's finest residential and investment properties</p>
 
             <!-- Property Search -->
             <div class="search-box">
@@ -386,6 +387,7 @@
         </div>
     </footer>
 
+    <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

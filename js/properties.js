@@ -1,5 +1,6 @@
 // Sample property data
 const propertiesData = [
+    { id: 11, image: 'media/danube/oceanz-tower-2/images/exterior/Oceanz3_exterior_newsky.jpg', price: 1138000, purpose: 'buy', type: 'apartment', location: 'maritime-city', locationName: 'Dubai Maritime City', bedrooms: 1, bathrooms: 1, sqft: 746, badge: 'New Launch', developer: 'Danube Properties', detailPage: 'property-oceanz-tower-2.html', title: 'Oceanz Tower 2' },
     { id: 1, image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800', price: 1850000, purpose: 'buy', type: 'apartment', location: 'downtown', locationName: 'Downtown Dubai', bedrooms: 2, bathrooms: 2, sqft: 1450, badge: 'Featured' },
     { id: 2, image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800', price: 4500000, purpose: 'buy', type: 'villa', location: 'arabian-ranches', locationName: 'Arabian Ranches', bedrooms: 5, bathrooms: 6, sqft: 5200, badge: 'Luxury' },
     { id: 3, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800', price: 2200000, purpose: 'buy', type: 'penthouse', location: 'marina', locationName: 'Dubai Marina', bedrooms: 3, bathrooms: 3, sqft: 2100, badge: 'Premium' },
@@ -26,10 +27,12 @@ function displayProperties(properties) {
     grid.innerHTML = properties.map(p => `
         <div class="property-card">
             <div class="property-image">
-                <img src="${p.image}" alt="${p.type} in ${p.locationName}" loading="lazy">
+                <img src="${p.image}" alt="${p.title || p.type} in ${p.locationName}" loading="lazy">
                 <span class="property-badge">${p.badge}</span>
+                ${p.developer ? `<span class="property-badge" style="top: 3rem; background: var(--primary-navy);">${p.developer}</span>` : ''}
             </div>
             <div class="property-info">
+                ${p.title ? `<div style="font-weight: 600; color: var(--primary-navy); margin-bottom: 0.5rem;">${p.title}</div>` : ''}
                 <div class="property-price">AED ${p.price.toLocaleString()}</div>
                 <div class="property-location"><i class="fas fa-map-marker-alt"></i> ${p.locationName}</div>
                 <div class="property-features">
@@ -39,7 +42,7 @@ function displayProperties(properties) {
                 </div>
                 <div class="property-footer">
                     <span class="property-type">${p.type.charAt(0).toUpperCase() + p.type.slice(1)}</span>
-                    <a href="#" class="view-details">View Details <i class="fas fa-arrow-right"></i></a>
+                    <a href="${p.detailPage || '#'}" class="view-details">View Details <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>

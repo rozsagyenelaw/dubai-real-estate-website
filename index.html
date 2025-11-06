@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your trusted real estate partner in Dubai. Find luxury properties for sale and rent in Dubai's most prestigious communities.">
+    <meta name="keywords" content="Dubai real estate, property Dubai, apartments Dubai, villas Dubai, real estate broker">
+    <title>Dubai Real Estate - Your Trusted Property Partner in Dubai</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/971501234567" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>DUBAI ESTATES</h1>
+                <p class="tagline">Your Trusted Real Estate Partner in Dubai</p>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="properties.html">Properties</a></li>
+                <li><a href="communities.html">Communities</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="why-dubai.html">Why Dubai</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="btn-contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2>Discover Your Dream Property in Dubai</h2>
+            <p>Exclusive access to Dubai's finest residential and investment properties</p>
+
+            <!-- Property Search -->
+            <div class="search-box">
+                <form class="search-form" action="properties.html" method="get">
+                    <div class="search-field">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" name="location" placeholder="Location" list="locations">
+                        <datalist id="locations">
+                            <option value="Downtown Dubai">
+                            <option value="Dubai Marina">
+                            <option value="Palm Jumeirah">
+                            <option value="Arabian Ranches">
+                            <option value="Jumeirah Beach Residence">
+                        </datalist>
+                    </div>
+                    <div class="search-field">
+                        <i class="fas fa-dollar-sign"></i>
+                        <select name="price">
+                            <option value="">Price Range</option>
+                            <option value="0-500000">Up to AED 500,000</option>
+                            <option value="500000-1000000">AED 500,000 - 1M</option>
+                            <option value="1000000-2000000">AED 1M - 2M</option>
+                            <option value="2000000-5000000">AED 2M - 5M</option>
+                            <option value="5000000+">AED 5M+</option>
+                        </select>
+                    </div>
+                    <div class="search-field">
+                        <i class="fas fa-bed"></i>
+                        <select name="bedrooms">
+                            <option value="">Bedrooms</option>
+                            <option value="studio">Studio</option>
+                            <option value="1">1 Bedroom</option>
+                            <option value="2">2 Bedrooms</option>
+                            <option value="3">3 Bedrooms</option>
+                            <option value="4+">4+ Bedrooms</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-search">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800" alt="Dubai skyline">
+                </div>
+                <div class="about-content">
+                    <span class="section-label">About Us</span>
+                    <h2>Your Trusted Partner in Dubai Real Estate</h2>
+                    <p>With over 15 years of experience in the Dubai property market, we've helped thousands of clients find their perfect homes and investments. Our expert team knows Dubai inside out, providing personalized service and unmatched market insights.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>15+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5000+</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="stat">
+                            <h3>98%</h3>
+                            <p>Satisfaction Rate</p>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn-primary">Learn More About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="featured-properties">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Featured Properties</span>
+                <h2>Handpicked Properties for You</h2>
+                <p>Explore our selection of premium properties across Dubai's most sought-after locations</p>
+            </div>
+
+            <div class="property-grid" id="featuredProperties">
+                <!-- Properties will be loaded via JavaScript -->
+            </div>
+
+            <div class="section-footer">
+                <a href="properties.html" class="btn-secondary">View All Properties</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">Why Choose Us</span>
+                <h2>Expert Guidance Every Step of the Way</h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Expert Knowledge</h3>
+                    <p>Our team brings deep understanding of Dubai's property market, ensuring you make informed decisions.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Personalized Service</h3>
+                    <p>We take time to understand your needs and match you with properties that truly fit your lifestyle.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Trust & Transparency</h3>
+                    <p>Complete transparency in all transactions with no hidden fees or surprises.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Seamless Process</h3>
+                    <p>From property search to closing, we handle every detail to make your experience effortless.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dubai Communities -->
+    <section class="communities-preview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Dubai Communities</span>
+                <h2>Explore Dubai's Premier Neighborhoods</h2>
+                <p>Discover the perfect community that matches your lifestyle</p>
+            </div>
+
+            <div class="communities-grid">
+                <div class="community-card">
+                    <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600" alt="Downtown Dubai">
+                    <div class="community-content">
+                        <h3>Downtown Dubai</h3>
+                        <p>Home to Burj Khalifa and Dubai Mall</p>
+                        <span class="price-range">From AED 1.2M</span>
+                        <a href="communities.html#downtown" class="btn-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="community-card">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600" alt="Dubai Marina">
+                    <div class="community-content">
+                        <h3>Dubai Marina</h3>
+                        <p>Waterfront living at its finest</p>
+                        <span class="price-range">From AED 900K</span>
+                        <a href="communities.html#marina" class="btn-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="community-card">
+                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Palm Jumeirah">
+                    <div class="community-content">
+                        <h3>Palm Jumeirah</h3>
+                        <p>Iconic island luxury residences</p>
+                        <span class="price-range">From AED 2.5M</span>
+                        <a href="communities.html#palm" class="btn-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="community-card">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600" alt="Arabian Ranches">
+                    <div class="community-content">
+                        <h3>Arabian Ranches</h3>
+                        <p>Family-friendly villa community</p>
+                        <span class="price-range">From AED 3M</span>
+                        <a href="communities.html#ranches" class="btn-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-footer">
+                <a href="communities.html" class="btn-secondary">View All Communities</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">Client Testimonials</span>
+                <h2>What Our Clients Say</h2>
+            </div>
+
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The team made finding our dream apartment in Dubai Marina incredibly easy. Their knowledge of the market and attention to detail was exceptional."</p>
+                    <div class="testimonial-author">
+                        <strong>Sarah Johnson</strong>
+                        <span>Purchased 2BR Apartment, Dubai Marina</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Professional, transparent, and always available. They helped us navigate the Dubai property market with confidence and found us the perfect investment property."</p>
+                    <div class="testimonial-author">
+                        <strong>Michael Chen</strong>
+                        <span>Investment Property, Downtown Dubai</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"From our first viewing to getting the keys, everything was seamless. Highly recommend their services to anyone looking for property in Dubai."</p>
+                    <div class="testimonial-author">
+                        <strong>Emma Williams</strong>
+                        <span>Rented Villa, Arabian Ranches</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated on New Listings</h2>
+                <p>Subscribe to receive the latest properties and market insights directly to your inbox</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Find Your Perfect Property?</h2>
+                <p>Let our expert team guide you through Dubai's dynamic real estate market</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary">Get in Touch</a>
+                    <a href="tel:+971501234567" class="btn-secondary">Call Us Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>DUBAI ESTATES</h3>
+                    <p>Your trusted real estate partner in Dubai, helping you find the perfect property since 2009.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="properties.html">Buy Property</a></li>
+                        <li><a href="properties.html?type=rent">Rent Property</a></li>
+                        <li><a href="communities.html">Communities</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="why-dubai.html">Why Dubai</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Sheikh Zayed Road, Dubai, UAE</li>
+                        <li><i class="fas fa-phone"></i> +971 50 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@dubaiestates.ae</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dubai Estates. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

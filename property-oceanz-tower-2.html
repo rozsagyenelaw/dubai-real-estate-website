@@ -145,13 +145,13 @@
             overflow: hidden;
         }
 
-        .video-container iframe {
+        .video-container video {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            border: none;
+            object-fit: contain;
         }
 
         .image-gallery {
@@ -352,13 +352,10 @@
                     <div class="property-section">
                         <h2>Property Video Tour</h2>
                         <div class="video-container">
-                            <iframe
-                                src="https://www.youtube.com/embed/VcCsWQ-Nw3Q"
-                                title="Oceanz Tower 2 Property Tour"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                allowfullscreen>
-                            </iframe>
+                            <video controls poster="media/danube/oceanz-tower-2/images/exterior/Oceanz3_exterior_newsky.jpg">
+                                <source src="media/danube/oceanz-tower-2/videos/Oceanz T3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
 

@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Timez by Danube Properties - Affordable Luxury in Dubai Silicon Oasis. Convertible Apartments, Private Pools, 45+ Amenities. 1% Monthly Payment Plan.">
+    <title>Timez by Danube Properties | Convertible Apartments | Dubai Silicon Oasis</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .property-detail-hero {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-navy) 100%);
+            padding: 8rem 0 4rem;
+            color: var(--white);
+        }
+
+        .property-detail-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .property-header {
+            margin-bottom: 3rem;
+        }
+
+        .property-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .property-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .property-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .property-meta i {
+            color: var(--gold);
+        }
+
+        .property-content {
+            background: var(--white);
+            padding: 4rem 0;
+        }
+
+        .property-grid {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .property-main {
+            flex: 1;
+        }
+
+        .property-sidebar {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 8px;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .price-card h3 {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .price-card .starting-from {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-btns {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-btns .btn {
+            width: 100%;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 6px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--primary-navy);
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #25D366;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #20BA5A;
+            transform: translateY(-2px);
+        }
+
+        .property-section {
+            margin-bottom: 3rem;
+        }
+
+        .property-section h2 {
+            font-size: 2rem;
+            color: var(--primary-navy);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            margin-bottom: 2rem;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .gallery-image {
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--light-gray);
+            border-radius: 8px;
+        }
+
+        .feature-item i {
+            font-size: 2rem;
+            color: var(--gold);
+            min-width: 40px;
+        }
+
+        .feature-item h4 {
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .units-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            background: white;
+            box-shadow: var(--shadow);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .units-table th {
+            background: var(--primary-navy);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .units-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .units-table tr:hover {
+            background: var(--light-gray);
+        }
+
+        .download-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .download-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 1.5rem;
+            background: var(--primary-navy);
+            color: white;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .download-btn:hover {
+            background: var(--gold);
+            color: var(--primary-navy);
+            transform: translateY(-2px);
+        }
+
+        .download-btn i {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .property-detail-hero {
+                padding: 6rem 0 3rem;
+            }
+
+            .property-header h1 {
+                font-size: 2rem;
+            }
+
+            .property-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .property-sidebar {
+                position: static;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .units-table {
+                font-size: 0.9rem;
+            }
+
+            .units-table th,
+            .units-table td {
+                padding: 0.75rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/971501234567" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>DUBAI ESTATES</h1>
+                <p class="tagline">Your Trusted Real Estate Partner in Dubai</p>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="properties.html" class="active" data-i18n="nav.properties">Properties</a></li>
+                <li><a href="communities.html" data-i18n="nav.communities">Communities</a></li>
+                <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="why-dubai.html" data-i18n="nav.whyDubai">Why Dubai</a></li>
+                <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                <li><a href="contact.html" class="btn-contact" data-i18n="nav.contact">Contact Us</a></li>
+                <li><button id="langToggle" class="lang-toggle">العربية</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Property Detail Hero -->
+    <section class="property-detail-hero">
+        <div class="property-detail-container">
+            <div class="property-header">
+                <span style="display: inline-block; background: var(--gold); color: var(--primary-navy); padding: 0.5rem 1rem; border-radius: 4px; font-weight: 600; margin-bottom: 1rem;">Danube Properties</span>
+                <h1>TIMEZ</h1>
+                <p style="font-size: 1.2rem; margin-bottom: 1rem;">It&#39;s Time To Own Your Dream Home - Affordable Luxury Living</p>
+                <div class="property-meta">
+                    <span><i class="fas fa-map-marker-alt"></i> Dubai Silicon Oasis</span>
+                    <span><i class="fas fa-building"></i> Modern Residential Tower</span>
+                    <span><i class="fas fa-star"></i> 45+ World-Class Amenities</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Content -->
+    <section class="property-content">
+        <div class="property-detail-container">
+            <div class="property-grid">
+                <!-- Main Content -->
+                <div class="property-main">
+
+                    <!-- Video Section -->
+                    <div class="property-section">
+                        <h2 data-i18n="property.videoTour">Property Video Tour</h2>
+                        <div class="video-container">
+                            <video controls poster="media/timez/images/exterior/Danube_Timez_Hero1 .jpg">
+                                <source src="media/timez/videos/Timez_Walkthrough_compressed.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="property-section">
+                        <h2><span data-i18n="property.about">About</span> Timez</h2>
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-dark);">
+                            Presenting Timez by Danube Properties - where affordable luxury meets innovation in Dubai Silicon Oasis. This modern residential tower brings a revolutionary concept to Dubai real estate with convertible apartments that adapt to your growing needs. Located just 2 minutes from Central Park and Silicon Central Mall, 3 minutes from the Metro, and only 12 minutes from Burj Khalifa, Timez offers the perfect blend of accessibility and tranquility.
+                        </p>
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-dark); margin-top: 1rem;">
+                            With 45+ world-class amenities including an infinity pool, aquatic gym, library, business center, prayer hall, kids facilities, and sports courts, Timez caters to every lifestyle need. The unique convertible apartment feature allows studios to transform into 1-bedroom units and 1-bedroom apartments into 2-bedroom spaces, providing flexibility for the future. Select apartments even feature private pools. The flexible 71-month payment plan with just 1% monthly payments and 0% interest makes your dream home accessible and affordable.
+                        </p>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="property-section">
+                        <h2 data-i18n="property.keyHighlights">Key Highlights</h2>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <i class="fas fa-percent"></i>
+                                <div>
+                                    <h4>1% Monthly Payment</h4>
+                                    <p>71-month flexible payment plan, 0% interest</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-subway"></i>
+                                <div>
+                                    <h4>3 Min to Metro</h4>
+                                    <p>Quick access to Dubai Metro</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-home"></i>
+                                <div>
+                                    <h4>Convertible Apartments</h4>
+                                    <p>Studio to 1BR, 1BR to 2BR</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-building"></i>
+                                <div>
+                                    <h4>Modern Living</h4>
+                                    <p>Dubai Silicon Oasis prime location</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-swimming-pool"></i>
+                                <div>
+                                    <h4>Private Pools Available</h4>
+                                    <p>Select apartments feature private pools</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-star"></i>
+                                <div>
+                                    <h4>45+ Amenities</h4>
+                                    <p>World-class lifestyle facilities</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Available Units -->
+                    <div class="property-section">
+                        <h2 data-i18n="property.availableUnits">Available Units</h2>
+                        <table class="units-table">
+                            <thead>
+                                <tr>
+                                    <th data-i18n="units.unitType">Unit Type</th>
+                                    <th data-i18n="units.size">Size (Sq.Ft)</th>
+                                    <th data-i18n="units.priceFrom">Price From</th>
+                                    <th data-i18n="units.status">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong data-i18n="units.studio">Studio (Convertible to 1BR)</strong></td>
+                                    <td>~450-550 Sq.Ft</td>
+                                    <td><strong>From AED 650,000</strong></td>
+                                    <td><span style="color: green; font-weight: 600;" data-i18n="units.available">Available</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>1 <span data-i18n="units.bedroom">Bedroom (Convertible to 2BR)</span></strong></td>
+                                    <td>~700-850 Sq.Ft</td>
+                                    <td><strong>From AED 950,000</strong></td>
+                                    <td><span style="color: green; font-weight: 600;" data-i18n="units.available">Available</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2 <span data-i18n="units.bedroom">Bedroom</span></strong></td>
+                                    <td>~1,000-1,200 Sq.Ft</td>
+                                    <td><strong>From AED 1,300,000</strong></td>
+                                    <td><span style="color: green; font-weight: 600;" data-i18n="units.available">Available</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>3 <span data-i18n="units.bedroom">Bedroom</span></strong></td>
+                                    <td>~1,600-1,900 Sq.Ft</td>
+                                    <td><strong>From AED 1,800,000</strong></td>
+                                    <td><span style="color: green; font-weight: 600;" data-i18n="units.available">Available</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>4 <span data-i18n="units.bedroom">Bedroom</span></strong></td>
+                                    <td>~2,200-2,600 Sq.Ft</td>
+                                    <td><strong>From AED 2,500,000</strong></td>
+                                    <td><span style="color: green; font-weight: 600;" data-i18n="units.available">Available</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Amenities -->
+                    <div class="property-section">
+                        <h2>45+ World-Class Amenities</h2>
+                        <p style="margin-bottom: 2rem; font-size: 1.1rem;">Timez features an impressive collection of over 45 lifestyle amenities designed to cater to every aspect of modern living:</p>
+
+                        <h3 style="color: var(--primary-navy); margin: 2rem 0 1rem;">Level 1 Amenities</h3>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <i class="fas fa-swimming-pool"></i>
+                                <div>
+                                    <h4>Infinity Pool & Jacuzzi</h4>
+                                    <p>Breathtaking skyline views</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-child"></i>
+                                <div>
+                                    <h4>Kids Pool & Splash Pad</h4>
+                                    <p>Safe water fun for children</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-dumbbell"></i>
+                                <div>
+                                    <h4>Aquatic Gym</h4>
+                                    <p>Water-based fitness</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-fire"></i>
+                                <div>
+                                    <h4>BBQ Area</h4>
+                                    <p>Outdoor grilling stations</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-baseball-ball"></i>
+                                <div>
+                                    <h4>Cricket Pitch</h4>
+                                    <p>Sports enthusiasts paradise</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-basketball-ball"></i>
+                                <div>
+                                    <h4>Basketball Court</h4>
+                                    <p>Full-size sports court</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-spa"></i>
+                                <div>
+                                    <h4>Wellness Club & Spa</h4>
+                                    <p>Relaxation and rejuvenation</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-cut"></i>
+                                <div>
+                                    <h4>Beauty Salon</h4>
+                                    <p>Professional grooming services</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-baby"></i>
+                                <div>
+                                    <h4>Kids Daycare</h4>
+                                    <p>Safe childcare facilities</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-golf-ball"></i>
+                                <div>
+                                    <h4>Golf Simulator</h4>
+                                    <p>Virtual golf experience</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-gamepad"></i>
+                                <div>
+                                    <h4>Arcade Zone</h4>
+                                    <p>Gaming entertainment</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-running"></i>
+                                <div>
+                                    <h4>Jogging Track</h4>
+                                    <p>Fitness and wellness</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 style="color: var(--primary-navy); margin: 2rem 0 1rem;">Level 2 Amenities</h3>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <i class="fas fa-bowling-ball"></i>
+                                <div>
+                                    <h4>Bowling Center</h4>
+                                    <p>Professional lanes</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-pray"></i>
+                                <div>
+                                    <h4>Prayer Hall</h4>
+                                    <p>Peaceful worship space</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-book"></i>
+                                <div>
+                                    <h4>Library</h4>
+                                    <p>Quiet reading area</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-film"></i>
+                                <div>
+                                    <h4>Outdoor Cinema</h4>
+                                    <p>Movie nights under stars</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-briefcase"></i>
+                                <div>
+                                    <h4>Business Centre</h4>
+                                    <p>Professional workspace</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-swimmer"></i>
+                                <div>
+                                    <h4>Pool 55 & Jacuzzi 55</h4>
+                                    <p>Exclusive level 55 pool</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 style="color: var(--primary-navy); margin: 2rem 0 1rem;">Rooftop Amenities</h3>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <i class="fas fa-eye"></i>
+                                <div>
+                                    <h4>Sky Observatory Deck</h4>
+                                    <p>Panoramic city views</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-om"></i>
+                                <div>
+                                    <h4>Sky Meditation</h4>
+                                    <p>Peaceful sanctuary above the city</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-glass-cheers"></i>
+                                <div>
+                                    <h4>Party Halls</h4>
+                                    <p>Indoor & outdoor event spaces</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-couch"></i>
+                                <div>
+                                    <h4>Swing With Skyline</h4>
+                                    <p>Unique rooftop experience</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Image Gallery -->
+                    <div class="property-section">
+                        <h2 data-i18n="property.exteriorViews">Exterior Views</h2>
+                        <div class="image-gallery">
+                            <div class="gallery-image">
+                                <img src="media/timez/images/exterior/Danube_Timez_Hero1 .jpg" alt="Timez Building Hero View">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="media/timez/images/exterior/Danube_Timez_Hero2.jpg" alt="Timez Exterior View">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="media/timez/images/exterior/Balcony View-1-2.jpg" alt="Timez Balcony View">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="media/timez/images/exterior/Balcony View2-2.jpg" alt="Timez Balcony">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="media/timez/images/exterior/Private_pool_in_apartment.jpg" alt="Private Pool in Apartment">
+                            </div>
+                        </div>
+
+                        <h2 style="margin-top: 3rem;" data-i18n="property.interiorSpaces">Interior Spaces</h2>
+                        <div class="image-gallery">
+                            <div class="gallery-image">
+                                <img src="media/timez/images/interior/1BHK-01.jpg" alt="1BR Living Room">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="media/timez/images/interior/1BHK-02.jpg" alt="1BR Living Space">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="media/timez/images/interior/BHK01.jpg" alt="Bedroom View">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="media/timez/images/interior/Studio-01.jpg" alt="Studio Interior">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="media/timez/images/interior/Studio-02.jpg" alt="Studio Living">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="media/timez/images/interior/Studio02-washroom-final.jpg" alt="Modern Bathroom">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="media/timez/images/interior/Kitchen.jpg" alt="Modern Kitchen">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="media/timez/images/interior/Entrance.jpg" alt="Building Entrance">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="media/timez/images/interior/Lobby-1.jpg" alt="Main Lobby">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="media/timez/images/interior/Lobby-2.jpg" alt="Lobby View">
+                            </div>
+                        </div>
+
+                        <h2 style="margin-top: 3rem;" data-i18n="property.premiumAmenities">Premium Amenities</h2>
+                        <div class="image-gallery">
+                            <div class="gallery-image">
+                                <img src="media/timez/images/amenities/Gym-2.jpg" alt="State-of-the-Art Gym">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="media/timez/images/amenities/pool-1.jpg" alt="Infinity Pool">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="media/timez/images/amenities/LIBRARY-2.jpg" alt="Modern Library">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="media/timez/images/amenities/Business_Center_1.jpg" alt="Business Center">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="media/timez/images/amenities/Prayer Hall.jpg" alt="Prayer Hall">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="media/timez/images/amenities/Kidz Play area-2.jpg" alt="Kids Play Area">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="media/timez/images/amenities/Kidz room-1.jpg" alt="Kids Room">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="media/timez/images/amenities/Podium View 2.jpg" alt="Podium Amenities">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="media/timez/images/amenities/00018.jpg" alt="Amenity Deck">
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Downloads -->
+                    <div class="property-section">
+                        <h2 data-i18n="property.downloadMaterials">Download Materials</h2>
+                        <div class="download-section">
+                            <a href="media/timez/brochures/Timez_brochure_EN.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i>
+                                <span data-i18n="download.floorPlans">Floor Plans</span>
+                            </a>
+                            <a href="media/timez/brochures/Timez_brochure_EN.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Factsheet</span>
+                            </a>
+                            <a href="media/timez/brochures/Timez_floor_plans.pdf" class="download-btn" download>
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Brochure</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Sidebar -->
+                <div class="property-sidebar">
+                    <div class="price-card">
+                        <h3>AED 650,000</h3>
+                        <p class="starting-from" data-i18n="property.startingPrice">Starting Price</p>
+
+                        <div style="background: white; padding: 1rem; border-radius: 6px; margin-bottom: 1.5rem;">
+                            <p style="font-size: 0.9rem; color: var(--text-gray); margin-bottom: 0.5rem;" data-i18n="property.paymentPlan">Payment Plan</p>
+                            <p style="font-size: 1.1rem; font-weight: 600; color: var(--primary-navy);">1% Monthly - 71 Months</p>
+                            <p style="font-size: 0.85rem; color: var(--text-gray); margin-top: 0.5rem;">0% Interest | Flexible Terms</p>
+                        </div>
+
+                        <div class="contact-btns">
+                            <a href="contact.html" class="btn btn-primary">
+                                <i class="fas fa-envelope"></i>
+                                <span data-i18n="property.requestInfo">Request Info</span>
+                            </a>
+                            <a href="https://wa.me/971501234567?text=I'm interested in Timez by Danube Properties in Dubai Silicon Oasis" class="btn btn-secondary" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                WhatsApp
+                            </a>
+                            <a href="tel:+971501234567" class="btn btn-primary">
+                                <i class="fas fa-phone"></i>
+                                <span data-i18n="property.callNow">Call Now</span>
+                            </a>
+                        </div>
+
+                        <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid var(--medium-gray);">
+                            <p style="font-size: 0.9rem; color: var(--text-gray); margin-bottom: 1rem;">
+                                <i class="fas fa-info-circle" style="color: var(--gold);"></i>
+                                <span data-i18n="property.consultantNote">Our real estate consultants are ready to help you find your perfect home.</span>
+                            </p>
+                            <div style="margin-top: 1rem; padding: 0.75rem; background: var(--light-gray); border-radius: 4px;">
+                                <p style="font-size: 0.85rem; color: var(--primary-navy); margin: 0;"><strong>30 Years of Trust</strong><br>Danube Properties - Timely Delivery Guaranteed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>DUBAI ESTATES</h3>
+                    <p>Your trusted partner in Dubai real estate, providing expert guidance and exceptional service since 2008.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="communities.html">Communities</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Sheikh Zayed Road, Dubai, UAE</li>
+                        <li><i class="fas fa-phone"></i> +971 50 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@dubaiestates.ae</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dubai Estates. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

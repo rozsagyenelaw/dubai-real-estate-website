@@ -1,16 +1,10 @@
 // Sample property data
 const propertiesData = [
-    { id: 11, image: 'media/danube/oceanz-tower-2/images/exterior/Oceanz3_exterior_newsky.jpg', price: 1138000, purpose: 'buy', type: 'apartment', location: 'maritime-city', locationName: 'Dubai Maritime City', bedrooms: 1, bathrooms: 1, sqft: 746, badge: 'New Launch', developer: 'Danube Properties', detailPage: 'property-oceanz-tower-2.html', title: 'Oceanz Tower 2' },
-    { id: 1, image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800', price: 1850000, purpose: 'buy', type: 'apartment', location: 'downtown', locationName: 'Downtown Dubai', bedrooms: 2, bathrooms: 2, sqft: 1450, badge: 'Featured' },
-    { id: 2, image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800', price: 4500000, purpose: 'buy', type: 'villa', location: 'arabian-ranches', locationName: 'Arabian Ranches', bedrooms: 5, bathrooms: 6, sqft: 5200, badge: 'Luxury' },
-    { id: 3, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800', price: 2200000, purpose: 'buy', type: 'penthouse', location: 'marina', locationName: 'Dubai Marina', bedrooms: 3, bathrooms: 3, sqft: 2100, badge: 'Premium' },
-    { id: 4, image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800', price: 180000, purpose: 'rent', type: 'apartment', location: 'jbr', locationName: 'JBR', bedrooms: 2, bathrooms: 2, sqft: 1300, badge: 'Available' },
-    { id: 5, image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800', price: 1450000, purpose: 'buy', type: 'apartment', location: 'business-bay', locationName: 'Business Bay', bedrooms: 2, bathrooms: 2, sqft: 1250, badge: 'New' },
-    { id: 6, image: 'https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800', price: 3200000, purpose: 'buy', type: 'townhouse', location: 'dubai-hills', locationName: 'Dubai Hills Estate', bedrooms: 4, bathrooms: 4, sqft: 3000, badge: 'Hot Deal' },
-    { id: 7, image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800', price: 6800000, purpose: 'buy', type: 'villa', location: 'palm', locationName: 'Palm Jumeirah', bedrooms: 6, bathrooms: 7, sqft: 7500, badge: 'Exclusive' },
-    { id: 8, image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800', price: 95000, purpose: 'rent', type: 'apartment', location: 'jlt', locationName: 'Jumeirah Lake Towers', bedrooms: 1, bathrooms: 1, sqft: 850, badge: 'Good Deal' },
-    { id: 9, image: 'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=800', price: 2850000, purpose: 'buy', type: 'apartment', location: 'downtown', locationName: 'Downtown Dubai', bedrooms: 3, bathrooms: 3, sqft: 2200, badge: 'Prime Location' },
-    { id: 10, image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800', price: 150000, purpose: 'rent', type: 'villa', location: 'arabian-ranches', locationName: 'Arabian Ranches', bedrooms: 4, bathrooms: 5, sqft: 4000, badge: 'Furnished' }
+    { id: 15, image: 'media/timez/images/exterior/Danube_Timez_Hero1 .jpg', price: 650000, purpose: 'buy', type: 'apartment', location: 'silicon-oasis', locationName: 'Dubai Silicon Oasis', bedrooms: 0, bathrooms: 1, sqft: 450, badge: 'Convertible Apartments', developer: 'Danube Properties', detailPage: 'property-timez.html', title: 'Timez' },
+    { id: 14, image: 'media/fashionz/images/exterior/DAY-VIEW.jpg', price: 850000, purpose: 'buy', type: 'apartment', location: 'jvt', locationName: 'Jumeirah Village Triangle', bedrooms: 0, bathrooms: 1, sqft: 520, badge: 'FashionTV Branded', developer: 'Danube Properties', detailPage: 'property-fashionz.html', title: 'Fashionz' },
+    { id: 13, image: 'media/bayz-102/images/exterior/Bayz 102 View1_Day_Final.jpg', price: 1200000, purpose: 'buy', type: 'apartment', location: 'business-bay', locationName: 'Business Bay', bedrooms: 0, bathrooms: 1, sqft: 500, badge: 'New Launch', developer: 'Danube Properties', detailPage: 'property-bayz-102.html', title: 'BAYZ 102' },
+    { id: 12, image: 'media/bayz/images/exterior/entrance_day_v6.jpg', price: 1175000, purpose: 'buy', type: 'apartment', location: 'business-bay', locationName: 'Business Bay', bedrooms: 0, bathrooms: 1, sqft: 500, badge: 'New Launch', developer: 'Danube Properties', detailPage: 'property-bayz.html', title: 'BAYZ 101' },
+    { id: 11, image: 'media/danube/oceanz-tower-2/images/exterior/Oceanz3_exterior_newsky.jpg', price: 1138000, purpose: 'buy', type: 'apartment', location: 'maritime-city', locationName: 'Dubai Maritime City', bedrooms: 1, bathrooms: 1, sqft: 746, badge: 'Featured', developer: 'Danube Properties', detailPage: 'property-oceanz-tower-2.html', title: 'Oceanz Tower 2' }
 ];
 
 let filteredProperties = [...propertiesData];
@@ -36,7 +30,7 @@ function displayProperties(properties) {
                 <div class="property-price">AED ${p.price.toLocaleString()}</div>
                 <div class="property-location"><i class="fas fa-map-marker-alt"></i> ${p.locationName}</div>
                 <div class="property-features">
-                    <div class="feature"><i class="fas fa-bed"></i> ${p.bedrooms} Bed${p.bedrooms !== 1 ? 's' : ''}</div>
+                    <div class="feature"><i class="fas fa-bed"></i> ${p.bedrooms === 0 ? 'Studio' : p.bedrooms + ' Bed' + (p.bedrooms !== 1 ? 's' : '')}</div>
                     <div class="feature"><i class="fas fa-bath"></i> ${p.bathrooms} Bath${p.bathrooms !== 1 ? 's' : ''}</div>
                     <div class="feature"><i class="fas fa-ruler-combined"></i> ${p.sqft.toLocaleString()} sqft</div>
                 </div>

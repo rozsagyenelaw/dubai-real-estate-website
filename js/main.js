@@ -87,6 +87,62 @@ if (newsletterForm) {
 const featuredPropertiesData = [
     {
         id: 0,
+        image: 'media/timez/images/exterior/Danube_Timez_Hero1 .jpg',
+        price: '650,000',
+        type: 'Apartment',
+        location: 'Dubai Silicon Oasis',
+        bedrooms: 'Studio',
+        bathrooms: 1,
+        sqft: '450+',
+        badge: 'Convertible Apartments',
+        developer: 'Danube Properties',
+        title: 'Timez',
+        detailPage: 'property-timez.html'
+    },
+    {
+        id: 1,
+        image: 'media/fashionz/images/exterior/DAY-VIEW.jpg',
+        price: '850,000',
+        type: 'Apartment',
+        location: 'Jumeirah Village Triangle',
+        bedrooms: 'Studio',
+        bathrooms: 1,
+        sqft: '520+',
+        badge: 'FashionTV Branded',
+        developer: 'Danube Properties',
+        title: 'Fashionz',
+        detailPage: 'property-fashionz.html'
+    },
+    {
+        id: 1,
+        image: 'media/bayz-102/images/exterior/Bayz 102 View1_Day_Final.jpg',
+        price: '1,200,000',
+        type: 'Apartment',
+        location: 'Business Bay',
+        bedrooms: 'Studio',
+        bathrooms: 1,
+        sqft: '500+',
+        badge: 'New Launch',
+        developer: 'Danube Properties',
+        title: 'BAYZ 102',
+        detailPage: 'property-bayz-102.html'
+    },
+    {
+        id: 2,
+        image: 'media/bayz/images/exterior/entrance_day_v6.jpg',
+        price: '1,175,000',
+        type: 'Apartment',
+        location: 'Business Bay',
+        bedrooms: 'Studio',
+        bathrooms: 1,
+        sqft: '500+',
+        badge: 'New Launch',
+        developer: 'Danube Properties',
+        title: 'BAYZ 101',
+        detailPage: 'property-bayz.html'
+    },
+    {
+        id: 2,
         image: 'media/danube/oceanz-tower-2/images/exterior/Oceanz3_exterior_newsky.jpg',
         price: '1,138,000',
         type: 'Apartment',
@@ -94,76 +150,10 @@ const featuredPropertiesData = [
         bedrooms: 1,
         bathrooms: 1,
         sqft: '746',
-        badge: 'New Launch',
+        badge: 'Featured',
         developer: 'Danube Properties',
         title: 'Oceanz Tower 2',
         detailPage: 'property-oceanz-tower-2.html'
-    },
-    {
-        id: 1,
-        image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800',
-        price: '1,850,000',
-        type: 'Apartment',
-        location: 'Downtown Dubai',
-        bedrooms: 2,
-        bathrooms: 2,
-        sqft: '1,450',
-        badge: 'Featured'
-    },
-    {
-        id: 2,
-        image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800',
-        price: '4,500,000',
-        type: 'Villa',
-        location: 'Arabian Ranches',
-        bedrooms: 5,
-        bathrooms: 6,
-        sqft: '5,200',
-        badge: 'Luxury'
-    },
-    {
-        id: 3,
-        image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800',
-        price: '2,200,000',
-        type: 'Penthouse',
-        location: 'Dubai Marina',
-        bedrooms: 3,
-        bathrooms: 3,
-        sqft: '2,100',
-        badge: 'Premium'
-    },
-    {
-        id: 4,
-        image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800',
-        price: '6,800,000',
-        type: 'Villa',
-        location: 'Palm Jumeirah',
-        bedrooms: 6,
-        bathrooms: 7,
-        sqft: '7,500',
-        badge: 'Exclusive'
-    },
-    {
-        id: 5,
-        image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800',
-        price: '1,450,000',
-        type: 'Apartment',
-        location: 'Business Bay',
-        bedrooms: 2,
-        bathrooms: 2,
-        sqft: '1,250',
-        badge: 'New'
-    },
-    {
-        id: 6,
-        image: 'https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800',
-        price: '3,200,000',
-        type: 'Townhouse',
-        location: 'Dubai Hills Estate',
-        bedrooms: 4,
-        bathrooms: 4,
-        sqft: '3,000',
-        badge: 'Hot Deal'
     }
 ];
 
@@ -186,10 +176,10 @@ if (featuredPropertiesContainer) {
                 </div>
                 <div class="property-features">
                     <div class="feature">
-                        <i class="fas fa-bed"></i> ${property.bedrooms} Beds
+                        <i class="fas fa-bed"></i> ${typeof property.bedrooms === 'string' ? property.bedrooms : property.bedrooms + ' Bed' + (property.bedrooms !== 1 ? 's' : '')}
                     </div>
                     <div class="feature">
-                        <i class="fas fa-bath"></i> ${property.bathrooms} Baths
+                        <i class="fas fa-bath"></i> ${property.bathrooms} Bath${property.bathrooms !== 1 ? 's' : ''}
                     </div>
                     <div class="feature">
                         <i class="fas fa-ruler-combined"></i> ${property.sqft} sqft

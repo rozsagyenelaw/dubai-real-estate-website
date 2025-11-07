@@ -120,6 +120,65 @@ const translations = {
         'contact.hours': 'Business Hours',
         'contact.hoursText': 'Sunday - Thursday: 9:00 AM - 6:00 PM',
         'contact.social': 'Connect With Us',
+
+        // Property Detail Page
+        'property.videoTour': 'Property Video Tour',
+        'property.about': 'About',
+        'property.keyHighlights': 'Key Highlights',
+        'property.availableUnits': 'Available Units',
+        'property.amenities': 'World-Class Amenities',
+        'property.exteriorViews': 'Exterior Views',
+        'property.interiorSpaces': 'Interior Spaces',
+        'property.premiumAmenities': 'Premium Amenities',
+        'property.downloadMaterials': 'Download Materials',
+        'property.startingPrice': 'Starting Price',
+        'property.paymentPlan': 'Payment Plan',
+        'property.requestInfo': 'Request Info',
+        'property.callNow': 'Call Now',
+        'property.consultantNote': 'Our real estate consultants are ready to help you find your perfect home.',
+
+        // Property Features
+        'feature.monthlyPayment': '1% Monthly Payment',
+        'feature.monthlyPaymentDesc': 'Flexible and affordable payment plan',
+        'feature.seaView': 'Sea View',
+        'feature.seaViewDesc': 'Stunning oblique sea views',
+        'feature.completion': 'Q1 2027 Completion',
+        'feature.completionDesc': 'Ready for handover soon',
+        'feature.primeLocation': 'Prime Location',
+        'feature.primeLocationDesc': 'Dubai Maritime City waterfront',
+
+        // Amenities
+        'amenity.pool': 'Swimming Pool',
+        'amenity.poolDesc': 'Resort-style infinity pool',
+        'amenity.fitness': 'Fitness Center',
+        'amenity.fitnessDesc': 'State-of-the-art gym equipment',
+        'amenity.cinema': 'Private Cinema',
+        'amenity.cinemaDesc': 'Exclusive movie screening room',
+        'amenity.business': 'Business Center',
+        'amenity.businessDesc': 'Fully equipped workspaces',
+        'amenity.library': 'Library',
+        'amenity.libraryDesc': 'Quiet reading and study areas',
+        'amenity.concierge': '24/7 Concierge',
+        'amenity.conciergeDesc': 'Premium concierge services',
+        'amenity.security': 'Security',
+        'amenity.securityDesc': '24-hour security and CCTV',
+        'amenity.parking': 'Parking',
+        'amenity.parkingDesc': 'Covered parking spaces',
+
+        // Units Table
+        'units.unitType': 'Unit Type',
+        'units.size': 'Size (Sq.Ft)',
+        'units.priceFrom': 'Price From',
+        'units.status': 'Status',
+        'units.studio': 'Studio',
+        'units.bedroom': 'Bedroom',
+        'units.presidentialSuite': 'Presidential Suite',
+        'units.available': 'Available',
+        'units.contactForPrice': 'Contact for Price',
+
+        // Download Section
+        'download.floorPlans': 'Floor Plans',
+        'download.paymentPlans': 'Payment Plans',
     },
     ar: {
         // Navigation
@@ -241,6 +300,65 @@ const translations = {
         'contact.hours': 'ساعات العمل',
         'contact.hoursText': 'الأحد - الخميس: 9:00 صباحًا - 6:00 مساءً',
         'contact.social': 'تواصل معنا',
+
+        // Property Detail Page
+        'property.videoTour': 'جولة فيديو في العقار',
+        'property.about': 'حول',
+        'property.keyHighlights': 'أبرز المميزات',
+        'property.availableUnits': 'الوحدات المتاحة',
+        'property.amenities': 'وسائل الراحة العالمية',
+        'property.exteriorViews': 'المناظر الخارجية',
+        'property.interiorSpaces': 'المساحات الداخلية',
+        'property.premiumAmenities': 'وسائل الراحة الفاخرة',
+        'property.downloadMaterials': 'تحميل المواد',
+        'property.startingPrice': 'السعر الابتدائي',
+        'property.paymentPlan': 'خطة الدفع',
+        'property.requestInfo': 'طلب معلومات',
+        'property.callNow': 'اتصل الآن',
+        'property.consultantNote': 'مستشارو العقارات لدينا مستعدون لمساعدتك في العثور على منزلك المثالي.',
+
+        // Property Features
+        'feature.monthlyPayment': 'دفع شهري 1%',
+        'feature.monthlyPaymentDesc': 'خطة دفع مرنة وبأسعار معقولة',
+        'feature.seaView': 'إطلالة بحرية',
+        'feature.seaViewDesc': 'إطلالات بحرية جانبية خلابة',
+        'feature.completion': 'الإنجاز في الربع الأول من 2027',
+        'feature.completionDesc': 'جاهز للتسليم قريبًا',
+        'feature.primeLocation': 'موقع متميز',
+        'feature.primeLocationDesc': 'واجهة دبي للملاحة البحرية',
+
+        // Amenities
+        'amenity.pool': 'مسبح',
+        'amenity.poolDesc': 'مسبح لا متناهٍ بأسلوب المنتجع',
+        'amenity.fitness': 'مركز اللياقة البدنية',
+        'amenity.fitnessDesc': 'معدات رياضية حديثة',
+        'amenity.cinema': 'سينما خاصة',
+        'amenity.cinemaDesc': 'غرفة عرض أفلام حصرية',
+        'amenity.business': 'مركز الأعمال',
+        'amenity.businessDesc': 'مساحات عمل مجهزة بالكامل',
+        'amenity.library': 'مكتبة',
+        'amenity.libraryDesc': 'مناطق هادئة للقراءة والدراسة',
+        'amenity.concierge': 'خدمة الكونسيرج 24/7',
+        'amenity.conciergeDesc': 'خدمات كونسيرج فاخرة',
+        'amenity.security': 'الأمن',
+        'amenity.securityDesc': 'أمن وكاميرات مراقبة على مدار الساعة',
+        'amenity.parking': 'مواقف السيارات',
+        'amenity.parkingDesc': 'مواقف سيارات مغطاة',
+
+        // Units Table
+        'units.unitType': 'نوع الوحدة',
+        'units.size': 'الحجم (قدم مربع)',
+        'units.priceFrom': 'السعر من',
+        'units.status': 'الحالة',
+        'units.studio': 'استوديو',
+        'units.bedroom': 'غرفة نوم',
+        'units.presidentialSuite': 'جناح رئاسي',
+        'units.available': 'متاح',
+        'units.contactForPrice': 'اتصل للسعر',
+
+        // Download Section
+        'download.floorPlans': 'مخططات الطوابق',
+        'download.paymentPlans': 'خطط الدفع',
     }
 };
 

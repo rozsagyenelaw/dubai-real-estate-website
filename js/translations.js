@@ -124,6 +124,8 @@ const translations = {
         // Property Detail Page
         'property.videoTour': 'Property Video Tour',
         'property.about': 'About',
+        'property.description1': 'Experience luxury waterfront living at Oceanz Tower 2 by Danube Properties, an exceptional residential development in Dubai Maritime City. This stunning tower offers breathtaking sea views and modern amenities designed for a sophisticated lifestyle.',
+        'property.description2': 'With 776 thoughtfully designed units ranging from studios to 4-bedroom apartments and presidential suites, Oceanz Tower 2 provides the perfect home for families, professionals, and investors. The flexible 1% monthly payment plan makes this premium property accessible to a wide range of buyers.',
         'property.keyHighlights': 'Key Highlights',
         'property.availableUnits': 'Available Units',
         'property.amenities': 'World-Class Amenities',
@@ -304,6 +306,8 @@ const translations = {
         // Property Detail Page
         'property.videoTour': 'جولة فيديو في العقار',
         'property.about': 'حول',
+        'property.description1': 'اختبر الحياة الفاخرة على الواجهة البحرية في برج أوشنز 2 من شركة دانوب العقارية، وهو مشروع سكني استثنائي في مدينة دبي للملاحة البحرية. يوفر هذا البرج المذهل إطلالات بحرية خلابة ووسائل راحة عصرية مصممة لأسلوب حياة متطور.',
+        'property.description2': 'مع 776 وحدة مصممة بعناية تتراوح من استوديوهات إلى شقق من 4 غرف نوم وأجنحة رئاسية، يوفر برج أوشنز 2 المنزل المثالي للعائلات والمهنيين والمستثمرين. تجعل خطة الدفع الشهرية المرنة بنسبة 1٪ هذا العقار المتميز في متناول مجموعة واسعة من المشترين.',
         'property.keyHighlights': 'أبرز المميزات',
         'property.availableUnits': 'الوحدات المتاحة',
         'property.amenities': 'وسائل الراحة العالمية',

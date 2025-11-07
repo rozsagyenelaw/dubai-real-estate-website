@@ -86,6 +86,20 @@ if (newsletterForm) {
 // ===== FEATURED PROPERTIES DATA =====
 const featuredPropertiesData = [
     {
+        id: 0,
+        image: 'media/danube/oceanz-tower-2/images/exterior/Oceanz3_exterior_newsky.jpg',
+        price: '1,138,000',
+        type: 'Apartment',
+        location: 'Dubai Maritime City',
+        bedrooms: 1,
+        bathrooms: 1,
+        sqft: '746',
+        badge: 'New Launch',
+        developer: 'Danube Properties',
+        title: 'Oceanz Tower 2',
+        detailPage: 'property-oceanz-tower-2.html'
+    },
+    {
         id: 1,
         image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800',
         price: '1,850,000',
@@ -162,8 +176,10 @@ if (featuredPropertiesContainer) {
             <div class="property-image">
                 <img src="${property.image}" alt="${property.type} in ${property.location}" loading="lazy">
                 <span class="property-badge">${property.badge}</span>
+                ${property.developer ? `<span class="property-badge" style="top: 3rem; background: var(--primary-navy);">${property.developer}</span>` : ''}
             </div>
             <div class="property-info">
+                ${property.title ? `<div style="font-weight: 600; color: var(--primary-navy); margin-bottom: 0.5rem;">${property.title}</div>` : ''}
                 <div class="property-price">AED ${property.price}</div>
                 <div class="property-location">
                     <i class="fas fa-map-marker-alt"></i> ${property.location}
@@ -181,7 +197,7 @@ if (featuredPropertiesContainer) {
                 </div>
                 <div class="property-footer">
                     <span class="property-type">${property.type}</span>
-                    <a href="properties.html" class="view-details">
+                    <a href="${property.detailPage || 'properties.html'}" class="view-details">
                         View Details <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>

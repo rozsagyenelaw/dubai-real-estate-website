@@ -83,6 +83,12 @@ const propertyFilters = document.getElementById('propertyFilters');
 if (propertyFilters) {
     propertyFilters.addEventListener('submit', (e) => { e.preventDefault(); filterProperties(); });
     propertyFilters.addEventListener('reset', () => { setTimeout(() => { filteredProperties = [...propertiesData]; displayProperties(filteredProperties); }, 100); });
+
+    // Add change event listeners to all filter inputs for automatic filtering
+    const filterInputs = propertyFilters.querySelectorAll('select, input[type="radio"]');
+    filterInputs.forEach(input => {
+        input.addEventListener('change', () => filterProperties());
+    });
 }
 
 const sortBy = document.getElementById('sortBy');

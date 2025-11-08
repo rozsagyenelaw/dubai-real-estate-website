@@ -94,4 +94,44 @@ if (propertyFilters) {
 const sortBy = document.getElementById('sortBy');
 if (sortBy) sortBy.addEventListener('change', (e) => sortProperties(e.target.value));
 
-if (document.getElementById('propertiesGrid')) displayProperties(filteredProperties);
+// Apply URL parameters on page load
+function applyUrlFilters() {
+    const urlParams = new URLSearchParams(window.location.search);
+
+    // Set location filter
+    const locationParam = urlParams.get('location');
+    if (locationParam) {
+        const locationSelect = document.querySelector('select[name="location"]');
+        if (locationSelect) {
+            locationSelect.value = locationParam;
+        }
+    }
+
+    // Set price filter
+    const priceParam = urlParams.get('priceRange');
+    if (priceParam) {
+        const priceSelect = document.querySelector('select[name="priceRange"]');
+        if (priceSelect) {
+            priceSelect.value = priceParam;
+        }
+    }
+
+    // Set bedrooms filter
+    const bedroomsParam = urlParams.get('bedrooms');
+    if (bedroomsParam) {
+        const bedroomsSelect = document.querySelector('select[name="bedrooms"]');
+        if (bedroomsSelect) {
+            bedroomsSelect.value = bedroomsParam;
+        }
+    }
+
+    // Apply filters if any URL params exist
+    if (locationParam || priceParam || bedroomsParam) {
+        filterProperties();
+    }
+}
+
+if (document.getElementById('propertiesGrid')) {
+    displayProperties(filteredProperties);
+    applyUrlFilters();
+}

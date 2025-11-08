@@ -252,3 +252,18 @@ window.addEventListener('load', () => {
         document.body.style.opacity = '1';
     }, 100);
 });
+
+// ===== HERO SLIDER =====
+const heroSlides = document.querySelectorAll('.hero-slide');
+if (heroSlides.length > 0) {
+    let currentSlide = 0;
+
+    function showNextSlide() {
+        heroSlides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % heroSlides.length;
+        heroSlides[currentSlide].classList.add('active');
+    }
+
+    // Change slide every 5 seconds
+    setInterval(showNextSlide, 5000);
+}

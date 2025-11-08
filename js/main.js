@@ -87,7 +87,7 @@ if (newsletterForm) {
 const featuredPropertiesData = [
     {
         id: 0,
-        image: 'media/timez/images/exterior/Danube_Timez_Hero1 .jpg',
+        image: 'media/timez/images/exterior/Danube_Timez_Hero1.jpg',
         price: '650,000',
         type: 'Apartment',
         location: 'Dubai Silicon Oasis',

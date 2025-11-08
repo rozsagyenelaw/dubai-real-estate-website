@@ -87,6 +87,20 @@ if (newsletterForm) {
 const featuredPropertiesData = [
     {
         id: 0,
+        image: 'media/diamondz/images/exterior/Exterior.jpg',
+        price: '1,130,000',
+        type: 'Apartment',
+        location: 'Jumeirah Lake Towers',
+        bedrooms: 'Studio',
+        bathrooms: 1,
+        sqft: '407',
+        badge: 'Ultra Luxury',
+        developer: 'Danube Properties',
+        title: 'Diamondz',
+        detailPage: 'property-diamondz.html'
+    },
+    {
+        id: 1,
         image: 'media/timez/images/exterior/Danube_Timez_Hero1.jpg',
         price: '650,000',
         type: 'Apartment',

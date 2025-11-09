@@ -24,7 +24,6 @@ function displayProperties(properties) {
             <div class="property-image">
                 <img src="${p.image}" alt="${p.title || p.type} in ${p.locationName}" loading="lazy">
                 <span class="property-badge">${p.badge}</span>
-                ${p.developer ? `<span class="property-badge" style="top: 3rem; background: var(--primary-navy);">${p.developer}</span>` : ''}
             </div>
             <div class="property-info">
                 ${p.title ? `<div style="font-weight: 600; color: var(--primary-navy); margin-bottom: 0.5rem;">${p.title}</div>` : ''}

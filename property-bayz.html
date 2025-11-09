@@ -6,6 +6,7 @@
     <meta name="description" content="BAYZ - [DEVELOPER] - Premium residential development in [LOCATION]. Studios and 1-3 bedroom units available.">
     <title>BAYZ by [DEVELOPER] | [LOCATION]</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/property-carousel.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .property-detail-hero {
@@ -54,9 +55,12 @@
 
         .property-grid {
             display: grid;
-            grid-template-columns: 1fr 350px;
+            grid-template-columns: 1fr;
             gap: 3rem;
             margin-bottom: 3rem;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .property-main {
@@ -358,6 +362,93 @@
                         </p>
                     </div>
 
+                    <!-- Image Carousels -->
+                    <div class="carousels-grid">
+                        <!-- Exterior Carousel -->
+                        <div class="carousel-section">
+                            <div class="carousel-header">
+                                <h2 data-i18n="property.exteriorViews">Exterior Views</h2>
+                            </div>
+                            <div class="carousel-container" id="exteriorCarousel">
+                                <div class="carousel-wrapper">
+                                    <div class="carousel-slide active">
+                                        <img src="media/bayz/images/exterior/entrance_day_v6.jpg" alt="BAYZ Entrance Day">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/bayz/images/exterior/entrance_night_v6.jpg" alt="BAYZ Entrance Night">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/bayz/images/exterior/c2v1b9.jpg" alt="BAYZ Exterior">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/bayz/images/exterior/c2n1v5.jpg" alt="BAYZ Building View">
+                                    </div>
+                                </div>
+                                <button class="carousel-arrow prev" aria-label="Previous slide">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="carousel-arrow next" aria-label="Next slide">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <div class="carousel-dots"></div>
+                            </div>
+                        </div>
+
+                        <!-- Interior & Amenities Carousel -->
+                        <div class="carousel-section">
+                            <div class="carousel-header">
+                                <h2 data-i18n="property.interiorSpaces">Interior Spaces & Amenities</h2>
+                            </div>
+                            <div class="carousel-container" id="interiorCarousel">
+                                <div class="carousel-wrapper">
+                                    <div class="carousel-slide active">
+                                        <img src="media/bayz/images/interior/1BR_Living_Day_v1b8.jpg" alt="1BR Living Room Day">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/bayz/images/interior/1BR_Living_Night_v1b8.jpg" alt="1BR Living Room Night">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/bayz/images/interior/1BR_Bedroom_v1b9.jpg" alt="1BR Bedroom">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/bayz/images/interior/2BR_Living_Day_v2b1.jpg" alt="2BR Living Room">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/bayz/images/interior/2BR_Kitchen_v1b4.jpg" alt="2BR Kitchen">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/bayz/images/interior/2BR_Bathroom_v1b6.jpg" alt="2BR Bathroom">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/bayz/images/interior/3BR_Living_v1b3.jpg" alt="3BR Living Room">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/bayz/images/interior/3BR_kitchen_day_v1b1.jpg" alt="3BR Kitchen">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/bayz/images/amenities/Entrance_Lobby_v1b5.jpg" alt="Entrance Lobby">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/bayz/images/amenities/Lift_Lobby_v1b6-wip.jpg" alt="Lift Lobby">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/bayz/images/amenities/Gym_v1b8.jpg" alt="Gym">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/bayz/images/amenities/Multipurpose_hall_v1b6.jpg" alt="Multipurpose Hall">
+                                    </div>
+                                </div>
+                                <button class="carousel-arrow prev" aria-label="Previous slide">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="carousel-arrow next" aria-label="Next slide">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <div class="carousel-dots"></div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Key Features -->
                     <div class="property-section">
                         <h2 data-i18n="property.keyHighlights">Key Highlights</h2>
@@ -632,65 +723,41 @@
                         </div>
                     </div>
 
-                    <!-- Image Gallery -->
-                    <div class="property-section">
-                        <h2 data-i18n="property.exteriorViews">Exterior Views</h2>
-                        <div class="image-gallery">
-                            <div class="gallery-image">
-                                <img src="media/bayz/images/exterior/entrance_day_v6.jpg" alt="BAYZ Entrance Day">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/bayz/images/exterior/entrance_night_v6.jpg" alt="BAYZ Entrance Night">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/bayz/images/exterior/c2v1b9.jpg" alt="BAYZ Exterior">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/bayz/images/exterior/c2n1v5.jpg" alt="BAYZ Building View">
-                            </div>
-                        </div>
+                    <!-- Price & Contact Card -->
+                    <div class="property-section" style="position: static; max-width: 500px; margin: 0 auto;">
+                        <div class="price-card" style="background: var(--light-gray); padding: 2rem; border-radius: 8px;">
+                            <h3 style="font-size: 2rem; color: var(--gold); margin-bottom: 0.5rem;">AED 1,175,000</h3>
+                            <p class="starting-from" style="font-size: 0.9rem; color: var(--text-gray); margin-bottom: 1.5rem;" data-i18n="property.startingPrice">Starting Price</p>
 
-                        <h2 style="margin-top: 3rem;" data-i18n="property.interiorSpaces">Interior Spaces</h2>
-                        <div class="image-gallery">
-                            <div class="gallery-image">
-                                <img src="media/bayz/images/interior/1BR_Living_Day_v1b8.jpg" alt="1BR Living Room Day">
+                            <div style="background: white; padding: 1rem; border-radius: 6px; margin-bottom: 1.5rem;">
+                                <p style="font-size: 0.9rem; color: var(--text-gray); margin-bottom: 0.5rem;" data-i18n="property.paymentPlan">Payment Plan</p>
+                                <p style="font-size: 1.1rem; font-weight: 600; color: var(--primary-navy);">1% Monthly - 80 Months</p>
+                                <p style="font-size: 0.85rem; color: var(--text-gray); margin-top: 0.5rem;">0% Interest | Flexible Terms</p>
                             </div>
-                            <div class="gallery-image">
-                                <img src="media/bayz/images/interior/1BR_Living_Night_v1b8.jpg" alt="1BR Living Room Night">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/bayz/images/interior/1BR_Bedroom_v1b9.jpg" alt="1BR Bedroom">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/bayz/images/interior/2BR_Living_Day_v2b1.jpg" alt="2BR Living Room">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/bayz/images/interior/2BR_Kitchen_v1b4.jpg" alt="2BR Kitchen">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/bayz/images/interior/2BR_Bathroom_v1b6.jpg" alt="2BR Bathroom">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/bayz/images/interior/3BR_Living_v1b3.jpg" alt="3BR Living Room">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/bayz/images/interior/3BR_kitchen_day_v1b1.jpg" alt="3BR Kitchen">
-                            </div>
-                        </div>
 
-                        <h2 style="margin-top: 3rem;" data-i18n="property.premiumAmenities">Premium Amenities</h2>
-                        <div class="image-gallery">
-                            <div class="gallery-image">
-                                <img src="media/bayz/images/amenities/Entrance_Lobby_v1b5.jpg" alt="Entrance Lobby">
+                            <div class="contact-btns" style="display: flex; flex-direction: column; gap: 1rem;">
+                                <a href="contact.html" class="btn btn-primary" style="width: 100%; padding: 1rem; text-align: center; border-radius: 6px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 0.5rem; transition: all 0.3s ease; background: var(--gold); color: var(--primary-navy);">
+                                    <i class="fas fa-envelope"></i>
+                                    <span data-i18n="property.requestInfo">Request Info</span>
+                                </a>
+                                <a href="https://wa.me/971501234567?text=I'm interested in BAYZ 101 by Danube Properties" class="btn btn-secondary" target="_blank" style="width: 100%; padding: 1rem; text-align: center; border-radius: 6px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 0.5rem; transition: all 0.3s ease; background: #25D366; color: white;">
+                                    <i class="fab fa-whatsapp"></i>
+                                    WhatsApp
+                                </a>
+                                <a href="tel:+971501234567" class="btn btn-primary" style="width: 100%; padding: 1rem; text-align: center; border-radius: 6px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 0.5rem; transition: all 0.3s ease; background: var(--gold); color: var(--primary-navy);">
+                                    <i class="fas fa-phone"></i>
+                                    <span data-i18n="property.callNow">Call Now</span>
+                                </a>
                             </div>
-                            <div class="gallery-image">
-                                <img src="media/bayz/images/amenities/Lift_Lobby_v1b6-wip.jpg" alt="Lift Lobby">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/bayz/images/amenities/Gym_v1b8.jpg" alt="Gym">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/bayz/images/amenities/Multipurpose_hall_v1b6.jpg" alt="Multipurpose Hall">
+
+                            <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid var(--medium-gray);">
+                                <p style="font-size: 0.9rem; color: var(--text-gray); margin-bottom: 1rem;">
+                                    <i class="fas fa-info-circle" style="color: var(--gold);"></i>
+                                    <span data-i18n="property.consultantNote">Our real estate consultants are ready to help you find your perfect home.</span>
+                                </p>
+                                <div style="margin-top: 1rem; padding: 0.75rem; background: var(--light-gray); border-radius: 4px;">
+                                    <p style="font-size: 0.85rem; color: var(--primary-navy); margin: 0;"><strong>30 Years of Trust</strong><br>Danube Properties - Timely Delivery Guaranteed</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -731,45 +798,6 @@
                             </div>
                             <div class="gallery-image">
                                 <img src="media/bayz/images/floorplans/floor_plans_1555227099/3 BED - TYPE 3A.png" alt="3 Bed Type 3A">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Sidebar -->
-                <div class="property-sidebar">
-                    <div class="price-card">
-                        <h3>AED 1,175,000</h3>
-                        <p class="starting-from" data-i18n="property.startingPrice">Starting Price</p>
-
-                        <div style="background: white; padding: 1rem; border-radius: 6px; margin-bottom: 1.5rem;">
-                            <p style="font-size: 0.9rem; color: var(--text-gray); margin-bottom: 0.5rem;" data-i18n="property.paymentPlan">Payment Plan</p>
-                            <p style="font-size: 1.1rem; font-weight: 600; color: var(--primary-navy);">1% Monthly - 80 Months</p>
-                            <p style="font-size: 0.85rem; color: var(--text-gray); margin-top: 0.5rem;">0% Interest | Flexible Terms</p>
-                        </div>
-
-                        <div class="contact-btns">
-                            <a href="contact.html" class="btn btn-primary">
-                                <i class="fas fa-envelope"></i>
-                                <span data-i18n="property.requestInfo">Request Info</span>
-                            </a>
-                            <a href="https://wa.me/971501234567?text=I'm interested in BAYZ 101 by Danube Properties" class="btn btn-secondary" target="_blank">
-                                <i class="fab fa-whatsapp"></i>
-                                WhatsApp
-                            </a>
-                            <a href="tel:+971501234567" class="btn btn-primary">
-                                <i class="fas fa-phone"></i>
-                                <span data-i18n="property.callNow">Call Now</span>
-                            </a>
-                        </div>
-
-                        <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid var(--medium-gray);">
-                            <p style="font-size: 0.9rem; color: var(--text-gray); margin-bottom: 1rem;">
-                                <i class="fas fa-info-circle" style="color: var(--gold);"></i>
-                                <span data-i18n="property.consultantNote">Our real estate consultants are ready to help you find your perfect home.</span>
-                            </p>
-                            <div style="margin-top: 1rem; padding: 0.75rem; background: var(--light-gray); border-radius: 4px;">
-                                <p style="font-size: 0.85rem; color: var(--primary-navy); margin: 0;"><strong>30 Years of Trust</strong><br>Danube Properties - Timely Delivery Guaranteed</p>
                             </div>
                         </div>
                     </div>
@@ -815,5 +843,6 @@
 
     <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/property-carousel.js"></script>
 </body>
 </html>

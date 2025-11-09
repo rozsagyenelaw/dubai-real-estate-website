@@ -180,7 +180,6 @@ if (featuredPropertiesContainer) {
             <div class="property-image">
                 <img src="${property.image}" alt="${property.type} in ${property.location}" loading="lazy">
                 <span class="property-badge">${property.badge}</span>
-                ${property.developer ? `<span class="property-badge" style="top: 3rem; background: var(--primary-navy);">${property.developer}</span>` : ''}
             </div>
             <div class="property-info">
                 ${property.title ? `<div style="font-weight: 600; color: var(--primary-navy); margin-bottom: 0.5rem;">${property.title}</div>` : ''}

@@ -6,6 +6,7 @@
     <meta name="description" content="Timez by Danube Properties - Affordable Luxury in Dubai Silicon Oasis. Convertible Apartments, Private Pools, 45+ Amenities. 1% Monthly Payment Plan.">
     <title>Timez by Danube Properties | Convertible Apartments | Dubai Silicon Oasis</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/property-carousel.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .property-detail-hero {
@@ -54,9 +55,12 @@
 
         .property-grid {
             display: grid;
-            grid-template-columns: 1fr 350px;
+            grid-template-columns: 1fr;
             gap: 3rem;
             margin-bottom: 3rem;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .property-main {
@@ -358,6 +362,117 @@
                         </p>
                     </div>
 
+                    <!-- Image Carousels -->
+                    <div class="carousels-grid">
+                        <!-- Exterior Carousel -->
+                        <div class="carousel-section">
+                            <div class="carousel-header">
+                                <h2 data-i18n="property.exteriorViews">Exterior</h2>
+                            </div>
+                            <div class="carousel-container" id="exteriorCarousel">
+                                <div class="carousel-wrapper">
+                                    <div class="carousel-slide active">
+                                        <img src="media/timez/images/exterior/Danube_Timez_Hero1.jpg" alt="Timez Building Hero View">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/timez/images/exterior/Danube_Timez_Hero2.jpg" alt="Timez Exterior View">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/timez/images/exterior/Balcony View-1-2.jpg" alt="Timez Balcony View">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/timez/images/exterior/Balcony View2-2.jpg" alt="Timez Balcony">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/timez/images/exterior/Private_pool_in_apartment.jpg" alt="Private Pool in Apartment">
+                                    </div>
+                                </div>
+                                <button class="carousel-arrow prev" aria-label="Previous image">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="carousel-arrow next" aria-label="Next image">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <div class="carousel-dots"></div>
+                            </div>
+                        </div>
+
+                        <!-- Interior Carousel -->
+                        <div class="carousel-section">
+                            <div class="carousel-header">
+                                <h2 data-i18n="property.interiorSpaces">Interior</h2>
+                            </div>
+                            <div class="carousel-container" id="interiorCarousel">
+                                <div class="carousel-wrapper">
+                                    <div class="carousel-slide active">
+                                        <img src="media/timez/images/interior/1BHK-01.jpg" alt="1BR Living Room">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/timez/images/interior/1BHK-02.jpg" alt="1BR Living Space">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/timez/images/interior/BHK01.jpg" alt="Bedroom View">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/timez/images/interior/Studio-01.jpg" alt="Studio Interior">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/timez/images/interior/Studio-02.jpg" alt="Studio Living">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/timez/images/interior/Studio02-washroom-final.jpg" alt="Modern Bathroom">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/timez/images/interior/Kitchen.jpg" alt="Modern Kitchen">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/timez/images/interior/Entrance.jpg" alt="Building Entrance">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/timez/images/interior/Lobby-1.jpg" alt="Main Lobby">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/timez/images/interior/Lobby-2.jpg" alt="Lobby View">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/timez/images/amenities/Gym-2.jpg" alt="State-of-the-Art Gym">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/timez/images/amenities/pool-1.jpg" alt="Infinity Pool">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/timez/images/amenities/LIBRARY-2.jpg" alt="Modern Library">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/timez/images/amenities/Business_Center_1.jpg" alt="Business Center">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/timez/images/amenities/Prayer Hall.jpg" alt="Prayer Hall">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/timez/images/amenities/Kidz Play area-2.jpg" alt="Kids Play Area">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/timez/images/amenities/Kidz room-1.jpg" alt="Kids Room">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/timez/images/amenities/Podium View 2.jpg" alt="Podium Amenities">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/timez/images/amenities/00018.jpg" alt="Amenity Deck">
+                                    </div>
+                                </div>
+                                <button class="carousel-arrow prev" aria-label="Previous image">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="carousel-arrow next" aria-label="Next image">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <div class="carousel-dots"></div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Key Features -->
                     <div class="property-section">
                         <h2 data-i18n="property.keyHighlights">Key Highlights</h2>
@@ -626,92 +741,45 @@
                         </div>
                     </div>
 
-                    <!-- Image Gallery -->
+                    <!-- Sidebar (Request Info Section) -->
                     <div class="property-section">
-                        <h2 data-i18n="property.exteriorViews">Exterior Views</h2>
-                        <div class="image-gallery">
-                            <div class="gallery-image">
-                                <img src="media/timez/images/exterior/Danube_Timez_Hero1.jpg" alt="Timez Building Hero View">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/timez/images/exterior/Danube_Timez_Hero2.jpg" alt="Timez Exterior View">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/timez/images/exterior/Balcony View-1-2.jpg" alt="Timez Balcony View">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/timez/images/exterior/Balcony View2-2.jpg" alt="Timez Balcony">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/timez/images/exterior/Private_pool_in_apartment.jpg" alt="Private Pool in Apartment">
-                            </div>
-                        </div>
+                        <div class="property-sidebar" style="position: static; max-width: 500px; margin: 0 auto;">
+                            <div class="price-card">
+                                <h3>AED 650,000</h3>
+                                <p class="starting-from" data-i18n="property.startingPrice">Starting Price</p>
 
-                        <h2 style="margin-top: 3rem;" data-i18n="property.interiorSpaces">Interior Spaces</h2>
-                        <div class="image-gallery">
-                            <div class="gallery-image">
-                                <img src="media/timez/images/interior/1BHK-01.jpg" alt="1BR Living Room">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/timez/images/interior/1BHK-02.jpg" alt="1BR Living Space">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/timez/images/interior/BHK01.jpg" alt="Bedroom View">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/timez/images/interior/Studio-01.jpg" alt="Studio Interior">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/timez/images/interior/Studio-02.jpg" alt="Studio Living">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/timez/images/interior/Studio02-washroom-final.jpg" alt="Modern Bathroom">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/timez/images/interior/Kitchen.jpg" alt="Modern Kitchen">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/timez/images/interior/Entrance.jpg" alt="Building Entrance">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/timez/images/interior/Lobby-1.jpg" alt="Main Lobby">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/timez/images/interior/Lobby-2.jpg" alt="Lobby View">
-                            </div>
-                        </div>
+                                <div style="background: white; padding: 1rem; border-radius: 6px; margin-bottom: 1.5rem;">
+                                    <p style="font-size: 0.9rem; color: var(--text-gray); margin-bottom: 0.5rem;" data-i18n="property.paymentPlan">Payment Plan</p>
+                                    <p style="font-size: 1.1rem; font-weight: 600; color: var(--primary-navy);">1% Monthly - 71 Months</p>
+                                    <p style="font-size: 0.85rem; color: var(--text-gray); margin-top: 0.5rem;">0% Interest | Flexible Terms</p>
+                                </div>
 
-                        <h2 style="margin-top: 3rem;" data-i18n="property.premiumAmenities">Premium Amenities</h2>
-                        <div class="image-gallery">
-                            <div class="gallery-image">
-                                <img src="media/timez/images/amenities/Gym-2.jpg" alt="State-of-the-Art Gym">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/timez/images/amenities/pool-1.jpg" alt="Infinity Pool">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/timez/images/amenities/LIBRARY-2.jpg" alt="Modern Library">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/timez/images/amenities/Business_Center_1.jpg" alt="Business Center">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/timez/images/amenities/Prayer Hall.jpg" alt="Prayer Hall">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/timez/images/amenities/Kidz Play area-2.jpg" alt="Kids Play Area">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/timez/images/amenities/Kidz room-1.jpg" alt="Kids Room">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/timez/images/amenities/Podium View 2.jpg" alt="Podium Amenities">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/timez/images/amenities/00018.jpg" alt="Amenity Deck">
+                                <div class="contact-btns">
+                                    <a href="contact.html" class="btn btn-primary">
+                                        <i class="fas fa-envelope"></i>
+                                        <span data-i18n="property.requestInfo">Request Info</span>
+                                    </a>
+                                    <a href="https://wa.me/971501234567?text=I'm interested in Timez by Danube Properties in Dubai Silicon Oasis" class="btn btn-secondary" target="_blank">
+                                        <i class="fab fa-whatsapp"></i>
+                                        WhatsApp
+                                    </a>
+                                    <a href="tel:+971501234567" class="btn btn-primary">
+                                        <i class="fas fa-phone"></i>
+                                        <span data-i18n="property.callNow">Call Now</span>
+                                    </a>
+                                </div>
+
+                                <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid var(--medium-gray);">
+                                    <p style="font-size: 0.9rem; color: var(--text-gray); margin-bottom: 1rem;">
+                                        <i class="fas fa-info-circle" style="color: var(--gold);"></i>
+                                        <span data-i18n="property.consultantNote">Our real estate consultants are ready to help you find your perfect home.</span>
+                                    </p>
+                                    <div style="margin-top: 1rem; padding: 0.75rem; background: var(--light-gray); border-radius: 4px;">
+                                        <p style="font-size: 0.85rem; color: var(--primary-navy); margin: 0;"><strong>30 Years of Trust</strong><br>Danube Properties - Timely Delivery Guaranteed</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
 
                     <!-- Downloads -->
@@ -733,45 +801,6 @@
                         </div>
                     </div>
 
-                </div>
-
-                <!-- Sidebar -->
-                <div class="property-sidebar">
-                    <div class="price-card">
-                        <h3>AED 650,000</h3>
-                        <p class="starting-from" data-i18n="property.startingPrice">Starting Price</p>
-
-                        <div style="background: white; padding: 1rem; border-radius: 6px; margin-bottom: 1.5rem;">
-                            <p style="font-size: 0.9rem; color: var(--text-gray); margin-bottom: 0.5rem;" data-i18n="property.paymentPlan">Payment Plan</p>
-                            <p style="font-size: 1.1rem; font-weight: 600; color: var(--primary-navy);">1% Monthly - 71 Months</p>
-                            <p style="font-size: 0.85rem; color: var(--text-gray); margin-top: 0.5rem;">0% Interest | Flexible Terms</p>
-                        </div>
-
-                        <div class="contact-btns">
-                            <a href="contact.html" class="btn btn-primary">
-                                <i class="fas fa-envelope"></i>
-                                <span data-i18n="property.requestInfo">Request Info</span>
-                            </a>
-                            <a href="https://wa.me/971501234567?text=I'm interested in Timez by Danube Properties in Dubai Silicon Oasis" class="btn btn-secondary" target="_blank">
-                                <i class="fab fa-whatsapp"></i>
-                                WhatsApp
-                            </a>
-                            <a href="tel:+971501234567" class="btn btn-primary">
-                                <i class="fas fa-phone"></i>
-                                <span data-i18n="property.callNow">Call Now</span>
-                            </a>
-                        </div>
-
-                        <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid var(--medium-gray);">
-                            <p style="font-size: 0.9rem; color: var(--text-gray); margin-bottom: 1rem;">
-                                <i class="fas fa-info-circle" style="color: var(--gold);"></i>
-                                <span data-i18n="property.consultantNote">Our real estate consultants are ready to help you find your perfect home.</span>
-                            </p>
-                            <div style="margin-top: 1rem; padding: 0.75rem; background: var(--light-gray); border-radius: 4px;">
-                                <p style="font-size: 0.85rem; color: var(--primary-navy); margin: 0;"><strong>30 Years of Trust</strong><br>Danube Properties - Timely Delivery Guaranteed</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -814,5 +843,6 @@
 
     <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/property-carousel.js"></script>
 </body>
 </html>

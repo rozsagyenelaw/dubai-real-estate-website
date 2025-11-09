@@ -6,6 +6,7 @@
     <meta name="description" content="Fashionz - Danube Properties - Dubai's First FashionTV Branded Residences in Jumeirah Village Triangle. Studios, 1, 2, 3 Bedrooms. Haute Couture Lifestyle Living.">
     <title>Fashionz by Danube Properties | FashionTV Branded Residences | JVT, Dubai</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/property-carousel.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .property-detail-hero {
@@ -54,9 +55,12 @@
 
         .property-grid {
             display: grid;
-            grid-template-columns: 1fr 350px;
+            grid-template-columns: 1fr;
             gap: 3rem;
             margin-bottom: 3rem;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .property-main {
@@ -358,6 +362,137 @@
                         </p>
                     </div>
 
+                    <!-- Image Carousels -->
+                    <div class="carousels-grid">
+
+                        <!-- Exterior Carousel -->
+                        <div class="carousel-section">
+                            <div class="carousel-header">
+                                <h2 data-i18n="property.exteriorViews">Exterior</h2>
+                            </div>
+                            <div class="carousel-container" id="exteriorCarousel">
+                                <div class="carousel-wrapper">
+                                    <div class="carousel-slide active">
+                                        <img src="media/fashionz/images/exterior/DAY-VIEW.jpg" alt="Fashionz Day View">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/exterior/Night--View-2.jpg" alt="Fashionz Night View">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/exterior/View-1.jpg" alt="Fashionz Exterior">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/exterior/JVT_C05.jpg" alt="JVT Location">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/exterior/JVT_C07.jpg" alt="JVT Community">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/exterior/Bayz 102 View1_Night_Final_Option1.jpg" alt="BAYZ 102 Night View">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/exterior/Bayz 102 View5_Twilight_Final.jpg" alt="BAYZ 102 Twilight">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/exterior/Bayz 102 View7_Day_Final.jpg" alt="BAYZ 102 Building View">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/exterior/Bayz 102 View7_Night_Final_Option1.jpg" alt="BAYZ 102 Night Exterior">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/exterior/Air Taxi Hero Shot 8k.jpg" alt="BAYZ 102 Aerial View">
+                                    </div>
+                                </div>
+                                <button class="carousel-arrow prev" aria-label="Previous image">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="carousel-arrow next" aria-label="Next image">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <div class="carousel-dots"></div>
+                            </div>
+                        </div>
+
+                        <!-- Interior Carousel -->
+                        <div class="carousel-section">
+                            <div class="carousel-header">
+                                <h2 data-i18n="property.interiorSpaces">Interior</h2>
+                            </div>
+                            <div class="carousel-container" id="interiorCarousel">
+                                <div class="carousel-wrapper">
+                                    <div class="carousel-slide active">
+                                        <img src="media/fashionz/images/interior/1BHK-LIVING-VIEW-1.jpg" alt="1BR Living Room">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/interior/1BHK-LIVING-VIEW-2.jpg" alt="1BR Living Space">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/interior/2BHK-LIVING-VIEW-1.jpg" alt="2BR Living Room">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/interior/2BHK-Bedroom-VIEW-1.jpg" alt="2BR Bedroom">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/interior/BATH-1.jpg" alt="Luxury Bathroom">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/interior/Main-Lobby-View-1.jpg" alt="Main Lobby">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/interior/Reception-View--1.jpg" alt="Reception Area">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/interior/Lift-Lobby-View-2.jpg" alt="Lift Lobby">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/interior/2BHK Living & Kitchen_final.jpg" alt="2BR Living & Kitchen">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/interior/2BHK Kitchen.jpg" alt="2BR Kitchen">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/interior/2BHK Guest Bedroom_upscayl_4x_realesrgan-x4plus-final.jpg" alt="2BR Guest Bedroom">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/interior/2BHK Master Bathroom.jpg" alt="2BR Master Bathroom">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/interior/Bayz 102 Bathroom_Final_V2-final.jpg" alt="Luxury Bathroom">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/interior/Reception Lobby.jpg" alt="Reception Lobby">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/interior/Lift Lobby.jpg" alt="Lift Lobby">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/amenities/Gym-B.jpg" alt="FashionTV Gym">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/amenities/SPA-B-Updated-230410.jpg" alt="FashionTV Spa">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/amenities/Branded-Salon-A.jpg" alt="FashionTV Salon">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/amenities/Roof-View-1-230412.jpg" alt="Rooftop Amenities">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="media/fashionz/images/amenities/Roof-View-2-230412.jpg" alt="Rooftop Views">
+                                    </div>
+                                </div>
+                                <button class="carousel-arrow prev" aria-label="Previous image">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="carousel-arrow next" aria-label="Next image">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <div class="carousel-dots"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
                     <!-- Key Features -->
                     <div class="property-section">
                         <h2 data-i18n="property.keyHighlights">Key Highlights</h2>
@@ -632,112 +767,45 @@
                         </div>
                     </div>
 
-                    <!-- Image Gallery -->
-                    <div class="property-section">
-                        <h2 data-i18n="property.exteriorViews">Exterior Views</h2>
-                        <div class="image-gallery">
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/exterior/DAY-VIEW.jpg" alt="Fashionz Day View">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/exterior/Night--View-2.jpg" alt="Fashionz Night View">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/exterior/View-1.jpg" alt="Fashionz Exterior">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/exterior/JVT_C05.jpg" alt="JVT Location">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/exterior/JVT_C07.jpg" alt="JVT Community">
-                            </div>
-                        </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/exterior/Bayz 102 View1_Night_Final_Option1.jpg" alt="BAYZ 102 Night View">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/exterior/Bayz 102 View5_Twilight_Final.jpg" alt="BAYZ 102 Twilight">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/exterior/Bayz 102 View7_Day_Final.jpg" alt="BAYZ 102 Building View">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/exterior/Bayz 102 View7_Night_Final_Option1.jpg" alt="BAYZ 102 Night Exterior">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/exterior/Air Taxi Hero Shot 8k.jpg" alt="BAYZ 102 Aerial View">
-                            </div>
-                        </div>
+                    <!-- Contact & Pricing Section -->
+                    <div class="property-section" style="position: static; max-width: 500px; margin: 0 auto;">
+                        <div class="property-sidebar">
+                            <div class="price-card">
+                                <h3>AED 850,000</h3>
+                                <p class="starting-from" data-i18n="property.startingPrice">Starting Price</p>
 
-                        <h2 style="margin-top: 3rem;" data-i18n="property.interiorSpaces">Interior Spaces</h2>
-                        <div class="image-gallery">
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/interior/1BHK-LIVING-VIEW-1.jpg" alt="1BR Living Room">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/interior/1BHK-LIVING-VIEW-2.jpg" alt="1BR Living Space">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/interior/2BHK-LIVING-VIEW-1.jpg" alt="2BR Living Room">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/interior/2BHK-Bedroom-VIEW-1.jpg" alt="2BR Bedroom">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/interior/BATH-1.jpg" alt="Luxury Bathroom">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/interior/Main-Lobby-View-1.jpg" alt="Main Lobby">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/interior/Reception-View--1.jpg" alt="Reception Area">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/interior/Lift-Lobby-View-2.jpg" alt="Lift Lobby">
-                            </div>
-                        </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/interior/2BHK Living & Kitchen_final.jpg" alt="2BR Living & Kitchen">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/interior/2BHK Kitchen.jpg" alt="2BR Kitchen">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/interior/2BHK Guest Bedroom_upscayl_4x_realesrgan-x4plus-final.jpg" alt="2BR Guest Bedroom">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/interior/2BHK Master Bathroom.jpg" alt="2BR Master Bathroom">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/interior/Bayz 102 Bathroom_Final_V2-final.jpg" alt="Luxury Bathroom">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/interior/Reception Lobby.jpg" alt="Reception Lobby">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/interior/Lift Lobby.jpg" alt="Lift Lobby">
-                            </div>
-                        </div>
+                                <div style="background: white; padding: 1rem; border-radius: 6px; margin-bottom: 1.5rem;">
+                                    <p style="font-size: 0.9rem; color: var(--text-gray); margin-bottom: 0.5rem;" data-i18n="property.paymentPlan">Payment Plan</p>
+                                    <p style="font-size: 1.1rem; font-weight: 600; color: var(--primary-navy);">1% Monthly - 80 Months</p>
+                                    <p style="font-size: 0.85rem; color: var(--text-gray); margin-top: 0.5rem;">0% Interest | Flexible Terms</p>
+                                </div>
 
-                        <h2 style="margin-top: 3rem;" data-i18n="property.premiumAmenities">Premium Amenities</h2>
-                        <div class="image-gallery">
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/amenities/Gym-B.jpg" alt="FashionTV Gym">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/amenities/SPA-B-Updated-230410.jpg" alt="FashionTV Spa">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/amenities/Branded-Salon-A.jpg" alt="FashionTV Salon">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/amenities/Roof-View-1-230412.jpg" alt="Rooftop Amenities">
-                            </div>
-                            <div class="gallery-image">
-                                <img src="media/fashionz/images/amenities/Roof-View-2-230412.jpg" alt="Rooftop Views">
+                                <div class="contact-btns">
+                                    <a href="contact.html" class="btn btn-primary">
+                                        <i class="fas fa-envelope"></i>
+                                        <span data-i18n="property.requestInfo">Request Info</span>
+                                    </a>
+                                    <a href="https://wa.me/971501234567?text=I'm interested in Fashionz - FashionTV Branded Residences by Danube Properties" class="btn btn-secondary" target="_blank">
+                                        <i class="fab fa-whatsapp"></i>
+                                        WhatsApp
+                                    </a>
+                                    <a href="tel:+971501234567" class="btn btn-primary">
+                                        <i class="fas fa-phone"></i>
+                                        <span data-i18n="property.callNow">Call Now</span>
+                                    </a>
+                                </div>
+
+                                <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid var(--medium-gray);">
+                                    <p style="font-size: 0.9rem; color: var(--text-gray); margin-bottom: 1rem;">
+                                        <i class="fas fa-info-circle" style="color: var(--gold);"></i>
+                                        <span data-i18n="property.consultantNote">Our real estate consultants are ready to help you find your perfect home.</span>
+                                    </p>
+                                    <div style="margin-top: 1rem; padding: 0.75rem; background: var(--light-gray); border-radius: 4px;">
+                                        <p style="font-size: 0.85rem; color: var(--primary-navy); margin: 0;"><strong>30 Years of Trust</strong><br>Danube Properties - Timely Delivery Guaranteed</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
 
                     <!-- Downloads -->
@@ -759,45 +827,6 @@
                         </div>
                     </div>
 
-                </div>
-
-                <!-- Sidebar -->
-                <div class="property-sidebar">
-                    <div class="price-card">
-                        <h3>AED 850,000</h3>
-                        <p class="starting-from" data-i18n="property.startingPrice">Starting Price</p>
-
-                        <div style="background: white; padding: 1rem; border-radius: 6px; margin-bottom: 1.5rem;">
-                            <p style="font-size: 0.9rem; color: var(--text-gray); margin-bottom: 0.5rem;" data-i18n="property.paymentPlan">Payment Plan</p>
-                            <p style="font-size: 1.1rem; font-weight: 600; color: var(--primary-navy);">1% Monthly - 80 Months</p>
-                            <p style="font-size: 0.85rem; color: var(--text-gray); margin-top: 0.5rem;">0% Interest | Flexible Terms</p>
-                        </div>
-
-                        <div class="contact-btns">
-                            <a href="contact.html" class="btn btn-primary">
-                                <i class="fas fa-envelope"></i>
-                                <span data-i18n="property.requestInfo">Request Info</span>
-                            </a>
-                            <a href="https://wa.me/971501234567?text=I'm interested in Fashionz - FashionTV Branded Residences by Danube Properties" class="btn btn-secondary" target="_blank">
-                                <i class="fab fa-whatsapp"></i>
-                                WhatsApp
-                            </a>
-                            <a href="tel:+971501234567" class="btn btn-primary">
-                                <i class="fas fa-phone"></i>
-                                <span data-i18n="property.callNow">Call Now</span>
-                            </a>
-                        </div>
-
-                        <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid var(--medium-gray);">
-                            <p style="font-size: 0.9rem; color: var(--text-gray); margin-bottom: 1rem;">
-                                <i class="fas fa-info-circle" style="color: var(--gold);"></i>
-                                <span data-i18n="property.consultantNote">Our real estate consultants are ready to help you find your perfect home.</span>
-                            </p>
-                            <div style="margin-top: 1rem; padding: 0.75rem; background: var(--light-gray); border-radius: 4px;">
-                                <p style="font-size: 0.85rem; color: var(--primary-navy); margin: 0;"><strong>30 Years of Trust</strong><br>Danube Properties - Timely Delivery Guaranteed</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -840,5 +869,6 @@
 
     <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/property-carousel.js"></script>
 </body>
 </html>

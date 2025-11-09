@@ -15,6 +15,22 @@ const completedProperties = [
         detailPage: 'property-eleganz.html',
         title: 'Eleganz',
         status: 'Completed'
+    },
+    {
+        id: 2,
+        image: 'media/opalz/images/exterior/Opalz_Build_2.jpg',
+        price: 0, // Contact for pricing
+        type: 'apartment',
+        location: 'silicon-oasis',
+        locationName: 'Dubai Silicon Oasis',
+        bedrooms: 1,
+        bathrooms: 1,
+        sqft: 0, // Varies
+        badge: 'Completed',
+        developer: 'Ready to Move In',
+        detailPage: 'property-opalz.html',
+        title: 'Opalz by Danube',
+        status: 'Completed'
     }
 ];
 

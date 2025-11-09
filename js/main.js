@@ -87,6 +87,48 @@ if (newsletterForm) {
 const featuredPropertiesData = [
     {
         id: 0,
+        image: 'media/eleganz/images/exterior/Full Building.png',
+        price: 'Contact',
+        type: 'Apartment',
+        location: 'Jumeirah Village Circle',
+        bedrooms: '1-4',
+        bathrooms: 1,
+        sqft: 'Varies',
+        badge: 'Completed',
+        developer: 'Ready to Move In',
+        title: 'Eleganz',
+        detailPage: 'property-eleganz.html'
+    },
+    {
+        id: 1,
+        image: 'media/opalz/images/exterior/Opalz_Build_2.jpg',
+        price: 'Contact',
+        type: 'Apartment',
+        location: 'Dubai Silicon Oasis',
+        bedrooms: 'Studio-2BR',
+        bathrooms: 1,
+        sqft: 'Varies',
+        badge: 'Completed',
+        developer: 'Ready to Move In',
+        title: 'Opalz by Danube',
+        detailPage: 'property-opalz.html'
+    },
+    {
+        id: 2,
+        image: 'media/elitz3/images/exterior/Elitz3_Day Shot.jpg',
+        price: '750,000',
+        type: 'Apartment',
+        location: 'Jumeirah Village Circle',
+        bedrooms: 'Studio',
+        bathrooms: 1,
+        sqft: '450',
+        badge: 'New Launch',
+        developer: 'Danube Properties',
+        title: 'ELITZ 3',
+        detailPage: 'property-elitz3.html'
+    },
+    {
+        id: 3,
         image: 'media/diamondz/images/exterior/Exterior.jpg',
         price: '1,130,000',
         type: 'Apartment',

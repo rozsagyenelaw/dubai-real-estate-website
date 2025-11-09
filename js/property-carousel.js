@@ -104,4 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize interior carousel
     new PropertyCarousel('interiorCarousel');
+
+    // Initialize amenities carousel (if exists)
+    new PropertyCarousel('amenitiesCarousel');
 });

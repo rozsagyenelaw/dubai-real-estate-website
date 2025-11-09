@@ -199,7 +199,7 @@ const featuredPropertiesData = [
         bathrooms: 1,
         sqft: 'Varies',
         badge: 'Completed',
-        title: 'Opalz by Danube',
+        title: 'Opalz',
         detailPage: 'property-opalz.html'
     },
     {

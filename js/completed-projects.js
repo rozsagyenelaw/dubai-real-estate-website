@@ -29,7 +29,7 @@ const completedProperties = [
         badge: 'Completed',
         developer: 'Ready to Move In',
         detailPage: 'property-opalz.html',
-        title: 'Opalz by Danube',
+        title: 'Opalz',
         status: 'Completed'
     }
 ];

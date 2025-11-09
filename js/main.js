@@ -95,7 +95,6 @@ const featuredPropertiesData = [
         bathrooms: 1,
         sqft: '500+',
         badge: 'New Launch',
-        developer: 'Danube Properties',
         title: 'BAYZ 102',
         detailPage: 'property-bayz-102.html'
     },
@@ -109,7 +108,6 @@ const featuredPropertiesData = [
         bathrooms: 1,
         sqft: '500+',
         badge: 'New Launch',
-        developer: 'Danube Properties',
         title: 'BAYZ 101',
         detailPage: 'property-bayz.html'
     },
@@ -123,7 +121,6 @@ const featuredPropertiesData = [
         bathrooms: 1,
         sqft: '407',
         badge: 'Ultra Luxury',
-        developer: 'Danube Properties',
         title: 'Diamondz',
         detailPage: 'property-diamondz.html'
     },
@@ -137,7 +134,6 @@ const featuredPropertiesData = [
         bathrooms: 1,
         sqft: '746',
         badge: 'Featured',
-        developer: 'Danube Properties',
         title: 'Oceanz Tower 2',
         detailPage: 'property-oceanz-tower-2.html'
     },
@@ -151,7 +147,6 @@ const featuredPropertiesData = [
         bathrooms: 1,
         sqft: '520+',
         badge: 'FashionTV Branded',
-        developer: 'Danube Properties',
         title: 'Fashionz',
         detailPage: 'property-fashionz.html'
     },
@@ -165,7 +160,6 @@ const featuredPropertiesData = [
         bathrooms: 1,
         sqft: '450',
         badge: 'New Launch',
-        developer: 'Danube Properties',
         title: 'ELITZ 3',
         detailPage: 'property-elitz3.html'
     },
@@ -179,7 +173,6 @@ const featuredPropertiesData = [
         bathrooms: 1,
         sqft: '450+',
         badge: 'Convertible Apartments',
-        developer: 'Danube Properties',
         title: 'Timez',
         detailPage: 'property-timez.html'
     },
@@ -193,7 +186,6 @@ const featuredPropertiesData = [
         bathrooms: 1,
         sqft: 'Varies',
         badge: 'Completed',
-        developer: 'Ready to Move In',
         title: 'Eleganz',
         detailPage: 'property-eleganz.html'
     },
@@ -207,7 +199,6 @@ const featuredPropertiesData = [
         bathrooms: 1,
         sqft: 'Varies',
         badge: 'Completed',
-        developer: 'Ready to Move In',
         title: 'Opalz by Danube',
         detailPage: 'property-opalz.html'
     },
@@ -221,7 +212,6 @@ const featuredPropertiesData = [
         bathrooms: 1,
         sqft: '480',
         badge: 'New Launch',
-        developer: 'Danube Properties',
         title: 'Breez',
         detailPage: 'property-breez.html'
     }

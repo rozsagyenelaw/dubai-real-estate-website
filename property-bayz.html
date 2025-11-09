@@ -7,6 +7,7 @@
     <title>BAYZ by [DEVELOPER] | [LOCATION]</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/property-carousel.css">
+    <link rel="stylesheet" href="css/download-modal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .property-detail-hero {
@@ -766,11 +767,11 @@
                     <div class="property-section">
                         <h2 data-i18n="property.downloadMaterials">Download Materials</h2>
                         <div class="download-section">
-                            <a href="media/bayz/brochures/Bayz101_floor_plans_ver2.pdf" class="download-btn" download>
+                            <a href="media/bayz/brochures/Bayz101_floor_plans_ver2.pdf" class="download-btn">
                                 <i class="fas fa-file-pdf"></i>
                                 <span data-i18n="download.floorPlans">Floor Plans</span>
                             </a>
-                            <a href="media/bayz/brochures/Bayz101_A4_factsheet_EN.pdf" class="download-btn" download>
+                            <a href="media/bayz/brochures/Bayz101_A4_factsheet_EN.pdf" class="download-btn">
                                 <i class="fas fa-file-pdf"></i>
                                 <span>Factsheet</span>
                             </a>
@@ -841,8 +842,73 @@
         </div>
     </footer>
 
+    <!-- Download Registration Modal -->
+    <div id="downloadModal" class="download-modal">
+        <div class="download-modal-content">
+            <button class="download-modal-close" aria-label="Close modal">&times;</button>
+
+            <div id="downloadFormContent">
+                <div class="download-modal-header">
+                    <h2>Register Your Interest</h2>
+                    <p>Please provide your information to download the materials</p>
+                </div>
+
+                <form id="downloadForm" class="download-form">
+                    <div class="form-group">
+                        <label for="downloadName">Name*</label>
+                        <input type="text" id="downloadName" name="name" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="downloadEmail">Email*</label>
+                        <input type="email" id="downloadEmail" name="email" placeholder="your.email@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="downloadPhone">Phone*</label>
+                        <div class="phone-input-wrapper">
+                            <select name="countryCode" class="country-code-select" required>
+                                <option value="+971">+971 (UAE)</option>
+                                <option value="+1">+1 (US)</option>
+                                <option value="+44">+44 (UK)</option>
+                                <option value="+91">+91 (India)</option>
+                                <option value="+92">+92 (Pakistan)</option>
+                                <option value="+20">+20 (Egypt)</option>
+                                <option value="+966">+966 (Saudi Arabia)</option>
+                                <option value="+974">+974 (Qatar)</option>
+                                <option value="+965">+965 (Kuwait)</option>
+                                <option value="+973">+973 (Bahrain)</option>
+                                <option value="+968">+968 (Oman)</option>
+                            </select>
+                            <input type="tel" id="downloadPhone" name="phone" placeholder="50 123 4567" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="downloadMessage">Message (Optional)</label>
+                        <textarea id="downloadMessage" name="message" placeholder="Any specific questions or requirements?"></textarea>
+                    </div>
+
+                    <button type="submit" class="download-submit-btn">SUBMIT</button>
+
+                    <p class="form-consent">
+                        By providing my information, I consent to receive property information and agree to the
+                        <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>.
+                    </p>
+                </form>
+            </div>
+
+            <div id="downloadSuccess" class="download-success">
+                <i class="fas fa-check-circle"></i>
+                <h3>Thank You!</h3>
+                <p>Your download will begin shortly. We'll also send the materials to your email.</p>
+            </div>
+        </div>
+    </div>
+
     <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
     <script src="js/property-carousel.js"></script>
+    <script src="js/download-modal.js"></script>
 </body>
 </html>

@@ -210,6 +210,20 @@ const featuredPropertiesData = [
         developer: 'Ready to Move In',
         title: 'Opalz by Danube',
         detailPage: 'property-opalz.html'
+    },
+    {
+        id: 9,
+        image: 'media/breez/images/exterior/BREEZ-60.jpg',
+        price: '800,000',
+        type: 'Apartment',
+        location: 'Jumeirah Village Circle',
+        bedrooms: 'Studio',
+        bathrooms: 1,
+        sqft: '480',
+        badge: 'New Launch',
+        developer: 'Danube Properties',
+        title: 'Breez',
+        detailPage: 'property-breez.html'
     }
 ];
 

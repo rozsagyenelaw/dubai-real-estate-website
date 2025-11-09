@@ -216,7 +216,7 @@ const featuredPropertiesData = [
         image: 'media/breez/images/exterior/BREEZ-60.jpg',
         price: '800,000',
         type: 'Apartment',
-        location: 'Jumeirah Village Circle',
+        location: 'Dubai Maritime City',
         bedrooms: 'Studio',
         bathrooms: 1,
         sqft: '480',

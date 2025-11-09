@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Browse our extensive portfolio of properties for sale and rent in Dubai. Find apartments, villas, and penthouses.">
-    <title>Properties for Sale & Rent in Dubai | Dubai Estates</title>
+    <meta name="description" content="Explore off-plan properties in Dubai. Pre-construction apartments and residences with flexible payment plans.">
+    <title>Off Plan Properties in Dubai | Dubai Estates</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -28,14 +28,14 @@
             </button>
             <ul class="nav-menu">
                 <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-                <li><a href="properties.html" class="active" data-i18n="nav.properties">Properties</a></li>
+                <li><a href="properties.html" data-i18n="nav.properties">Properties</a></li>
                 <li><a href="completed-projects.html">Completed Projects</a></li>
-                <li><a href="off-plan.html">Off Plan</a></li>
+                <li><a href="off-plan.html" class="active">Off Plan</a></li>
                 <li><a href="services.html" data-i18n="nav.services">Services</a></li>
                 <li><a href="why-dubai.html" data-i18n="nav.whyDubai">Why Dubai</a></li>
                 <li><a href="about.html" data-i18n="nav.about">About</a></li>
                 <li><a href="contact.html" class="btn-contact" data-i18n="nav.contact">Contact Us</a></li>
-                            <li><button id="langToggle" class="lang-toggle">العربية</button></li>
+                <li><button id="langToggle" class="lang-toggle">العربية</button></li>
             </ul>
         </div>
     </nav>
@@ -43,8 +43,8 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>Properties in Dubai</h1>
-            <p>Discover your perfect home or investment opportunity</p>
+            <h1>Off Plan Properties</h1>
+            <p>Invest early and secure the best prices with flexible payment plans</p>
         </div>
     </section>
 
@@ -53,16 +53,6 @@
         <div class="container">
             <form class="filters-form" id="propertyFilters">
                 <div class="filter-group">
-                    <label>Purpose</label>
-                    <div class="toggle-switch">
-                        <input type="radio" name="purpose" value="buy" id="purposeBuy" checked>
-                        <label for="purposeBuy">Buy</label>
-                        <input type="radio" name="purpose" value="rent" id="purposeRent">
-                        <label for="purposeRent">Rent</label>
-                    </div>
-                </div>
-
-                <div class="filter-group">
                     <label>Property Type</label>
                     <select name="propertyType">
                         <option value="">All Types</option>
@@ -70,7 +60,6 @@
                         <option value="villa">Villa</option>
                         <option value="townhouse">Townhouse</option>
                         <option value="penthouse">Penthouse</option>
-                        <option value="plot">Plot</option>
                     </select>
                 </div>
 
@@ -79,16 +68,10 @@
                     <select name="location">
                         <option value="">All Locations</option>
                         <option value="business-bay">Business Bay</option>
-                        <option value="downtown">Downtown Dubai</option>
-                        <option value="dubai-hills">Dubai Hills Estate</option>
                         <option value="maritime-city">Dubai Maritime City</option>
                         <option value="silicon-oasis">Dubai Silicon Oasis</option>
-                        <option value="marina">Dubai Marina</option>
-                        <option value="arabian-ranches">Arabian Ranches</option>
-                        <option value="jbr">JBR</option>
                         <option value="jlt">Jumeirah Lake Towers</option>
                         <option value="jvt">Jumeirah Village Triangle</option>
-                        <option value="palm">Palm Jumeirah</option>
                     </select>
                 </div>
 
@@ -129,30 +112,20 @@
     <section class="properties-listing">
         <div class="container">
             <div class="listing-header">
-                <p class="results-count">Showing <span id="resultsCount">24</span> properties</p>
+                <p class="results-count">Showing <span id="resultsCount">6</span> off-plan properties</p>
                 <div class="sort-options">
                     <label>Sort by:</label>
                     <select id="sortBy">
                         <option value="newest">Newest First</option>
                         <option value="price-low">Price: Low to High</option>
                         <option value="price-high">Price: High to Low</option>
-                        <option value="bedrooms">Bedrooms</option>
+                        <option value="completion">Completion Date</option>
                     </select>
                 </div>
             </div>
 
             <div class="property-grid" id="propertiesGrid">
                 <!-- Properties will be loaded via JavaScript -->
-            </div>
-
-            <!-- Pagination -->
-            <div class="pagination">
-                <button class="page-btn" disabled>&laquo; Previous</button>
-                <button class="page-num active">1</button>
-                <button class="page-num">2</button>
-                <button class="page-num">3</button>
-                <button class="page-num">4</button>
-                <button class="page-btn">Next &raquo;</button>
             </div>
         </div>
     </section>
@@ -161,10 +134,10 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>Can't Find What You're Looking For?</h2>
-                <p>Let us know your requirements and we'll find the perfect property for you</p>
+                <h2>Why Invest in Off-Plan Properties?</h2>
+                <p>Secure lower prices, flexible payment plans, and choose from a wider selection of units</p>
                 <div class="cta-buttons">
-                    <a href="contact.html" class="btn-primary">Contact Us</a>
+                    <a href="contact.html" class="btn-primary">Get Expert Advice</a>
                     <a href="tel:+971501234567" class="btn-secondary">Call Us Now</a>
                 </div>
             </div>
@@ -193,8 +166,8 @@
                         <li><a href="properties.html?type=rent">Rent Property</a></li>
                         <li><a href="services.html" data-i18n="nav.services">Services</a></li>
                         <li><a href="why-dubai.html" data-i18n="nav.whyDubai">Why Dubai</a></li>
-                                    <li><button id="langToggle" class="lang-toggle">العربية</button></li>
-            </ul>
+                        <li><button id="langToggle" class="lang-toggle">العربية</button></li>
+                    </ul>
                 </div>
 
                 <div class="footer-col">
@@ -205,8 +178,8 @@
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Service</a></li>
-                                    <li><button id="langToggle" class="lang-toggle">العربية</button></li>
-            </ul>
+                        <li><button id="langToggle" class="lang-toggle">العربية</button></li>
+                    </ul>
                 </div>
 
                 <div class="footer-col">
@@ -216,8 +189,8 @@
                         <li><i class="fas fa-phone"></i> +971 50 123 4567</li>
                         <li><i class="fas fa-envelope"></i> info@dubaiestates.ae</li>
                         <li><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</li>
-                                    <li><button id="langToggle" class="lang-toggle">العربية</button></li>
-            </ul>
+                        <li><button id="langToggle" class="lang-toggle">العربية</button></li>
+                    </ul>
                 </div>
             </div>
 
@@ -229,7 +202,6 @@
 
     <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/translations.js"></script>
-    <script src="js/properties.js"></script>
+    <script src="js/off-plan.js"></script>
 </body>
 </html>

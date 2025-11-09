@@ -51,16 +51,12 @@
     <!-- Properties Listing -->
     <section class="properties-listing">
         <div class="container">
-            <div class="empty-state" style="text-align: center; padding: 4rem 0;">
-                <i class="fas fa-building" style="font-size: 4rem; color: var(--medium-gray); margin-bottom: 1.5rem;"></i>
-                <h2 style="color: var(--primary-navy); margin-bottom: 1rem;">No Completed Projects Available</h2>
-                <p style="color: var(--text-gray); font-size: 1.1rem; margin-bottom: 2rem;">
-                    We currently don't have any completed projects listed. Check out our exciting off-plan properties with flexible payment plans.
-                </p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="off-plan.html" class="btn-primary">View Off-Plan Properties</a>
-                    <a href="properties.html" class="btn-secondary">View All Properties</a>
-                </div>
+            <div class="listing-header">
+                <p class="results-count">Showing <span id="resultsCount">1</span> completed project</p>
+            </div>
+
+            <div class="property-grid" id="propertiesGrid">
+                <!-- Properties will be loaded via JavaScript -->
             </div>
         </div>
     </section>
@@ -137,5 +133,6 @@
 
     <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/completed-projects.js"></script>
 </body>
 </html>

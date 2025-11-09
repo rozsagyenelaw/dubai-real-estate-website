@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eleganz - Completed luxury residential project in Jumeirah Village Circle. Ready-to-move-in apartments and townhouses with premium finishes.">
+    <title>Eleganz | Completed Project | Jumeirah Village Circle</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/property-carousel.css">
+    <link rel="stylesheet" href="css/download-modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .property-detail-hero {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-navy) 100%);
+            padding: 8rem 0 4rem;
+            color: var(--white);
+        }
+
+        .property-detail-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .property-header {
+            margin-bottom: 3rem;
+        }
+
+        .property-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .property-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .property-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .property-meta i {
+            color: var(--gold);
+        }
+
+        .property-content {
+            background: var(--white);
+            padding: 4rem 0;
+        }
+
+        .property-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .property-main {
+            flex: 1;
+        }
+
+        .property-sidebar {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 8px;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .price-card h3 {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .price-card .starting-from {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-btns {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-btns .btn {
+            width: 100%;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 6px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--primary-navy);
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #25D366;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #20BA5A;
+            transform: translateY(-2px);
+        }
+
+        .property-section {
+            margin-bottom: 3rem;
+        }
+
+        .property-section h2 {
+            font-size: 2rem;
+            color: var(--primary-navy);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            margin-bottom: 2rem;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .gallery-image {
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--light-gray);
+            border-radius: 8px;
+        }
+
+        .feature-item i {
+            font-size: 2rem;
+            color: var(--gold);
+            min-width: 40px;
+        }
+
+        .feature-item h4 {
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .units-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            background: white;
+            box-shadow: var(--shadow);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .units-table th {
+            background: var(--primary-navy);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .units-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .units-table tr:hover {
+            background: var(--light-gray);
+        }
+
+        .download-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .download-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 1.5rem;
+            background: var(--primary-navy);
+            color: white;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .download-btn:hover {
+            background: var(--gold);
+            color: var(--primary-navy);
+            transform: translateY(-2px);
+        }
+
+        .download-btn i {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .property-detail-hero {
+                padding: 6rem 0 3rem;
+            }
+
+            .property-header h1 {
+                font-size: 2rem;
+            }
+
+            .property-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .property-sidebar {
+                position: static;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .units-table {
+                font-size: 0.9rem;
+            }
+
+            .units-table th,
+            .units-table td {
+                padding: 0.75rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/971501234567" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>DUBAI ESTATES</h1>
+                <p class="tagline">Your Trusted Real Estate Partner in Dubai</p>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="properties.html" class="active" data-i18n="nav.properties">Properties</a></li>
+                <li><a href="completed-projects.html">Completed Projects</a></li>
+                <li><a href="off-plan.html">Off Plan</a></li>
+                <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="why-dubai.html" data-i18n="nav.whyDubai">Why Dubai</a></li>
+                <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                <li><a href="contact.html" class="btn-contact" data-i18n="nav.contact">Contact Us</a></li>
+                <li><button id="langToggle" class="lang-toggle">العربية</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Property Detail Hero -->
+    <section class="property-detail-hero">
+        <div class="property-detail-container">
+            <div class="property-header">
+                <span style="display: inline-block; background: green; color: white; padding: 0.5rem 1rem; border-radius: 4px; font-weight: 600; margin-bottom: 1rem;">Completed Project</span>
+                <h1>ELEGANZ</h1>
+                <p style="font-size: 1.2rem; margin-bottom: 1rem;">Ready to Move In - Luxury Apartments & Townhouses</p>
+                <div class="property-meta">
+                    <span><i class="fas fa-map-marker-alt"></i> Jumeirah Village Circle (JVC)</span>
+                    <span><i class="fas fa-building"></i> Completed Residential Community</span>
+                    <span><i class="fas fa-check-circle"></i> Ready for Occupancy</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Content -->
+    <section class="property-content">
+        <div class="property-detail-container">
+            <div class="property-grid">
+                <!-- Main Content -->
+                <div class="property-main">
+
+                    <!-- Description -->
+                    <div class="property-section">
+                        <h2><span data-i18n="property.about">About</span> Eleganz</h2>
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-dark);">
+                            Welcome to Eleganz - a beautifully completed residential development in the heart of Jumeirah Village Circle (JVC). This stunning community offers ready-to-move-in apartments and townhouses designed for modern luxury living. Located in one of Dubai's most sought-after family-friendly neighborhoods, Eleganz combines convenience with elegance.
+                        </p>
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-dark); margin-top: 1rem;">
+                            Eleganz features thoughtfully designed 1-bedroom, 2-bedroom, duplex apartments, and spacious townhouses with premium finishes and contemporary architecture. All units feature high-quality fixtures, modern kitchens, and spacious layouts perfect for comfortable living. The project is fully completed and ready for immediate occupancy, making it ideal for both investors and end-users seeking move-in-ready homes.
+                        </p>
+                    </div>
+
+                    <!-- Image Carousels -->
+                    <div class="carousels-grid">
+                        <!-- Exterior Carousel -->
+                        <div class="carousel-section">
+                        <div class="carousel-header">
+                            <h2 data-i18n="property.exteriorViews">Exterior</h2>
+                        </div>
+                        <div class="carousel-container" id="exteriorCarousel">
+                            <div class="carousel-wrapper">
+                                <div class="carousel-slide active">
+                                    <img src="media/eleganz/images/exterior/Full Building.png" alt="Eleganz Building">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/eleganz/images/exterior/DSC01680.jpg" alt="Eleganz Exterior View 1">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/eleganz/images/exterior/DSC01682.jpg" alt="Eleganz Exterior View 2">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/eleganz/images/exterior/DSC01684.jpg" alt="Eleganz Exterior View 3">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/eleganz/images/exterior/DSC01689.jpg" alt="Eleganz Exterior View 4">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/eleganz/images/exterior/IRE02211.jpg" alt="Eleganz Building View">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/eleganz/images/exterior/IRE02213.jpg" alt="Eleganz Community">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/eleganz/images/exterior/IRE02216.jpg" alt="Eleganz Facade">
+                                </div>
+                            </div>
+                            <button class="carousel-arrow prev" aria-label="Previous image">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="carousel-arrow next" aria-label="Next image">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="carousel-dots"></div>
+                        </div>
+                        </div>
+
+                        <!-- Interior Carousel -->
+                        <div class="carousel-section">
+                        <div class="carousel-header">
+                            <h2 data-i18n="property.interiorSpaces">Interior</h2>
+                        </div>
+                        <div class="carousel-container" id="interiorCarousel">
+                            <div class="carousel-wrapper">
+                                <div class="carousel-slide active">
+                                    <img src="media/eleganz/images/interior/IRE01871.jpg" alt="Eleganz Living Room">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/eleganz/images/interior/IRE01873.jpg" alt="Eleganz Bedroom">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/eleganz/images/interior/IRE01875.jpg" alt="Eleganz Kitchen">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/eleganz/images/interior/IRE01877.jpg" alt="Eleganz Dining Area">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/eleganz/images/interior/IRE01879.jpg" alt="Eleganz Interior 5">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/eleganz/images/interior/IRE01880.jpg" alt="Eleganz Interior 6">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/eleganz/images/interior/IRE01885.jpg" alt="Eleganz Interior 7">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/eleganz/images/interior/IRE01886.jpg" alt="Eleganz Interior 8">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/eleganz/images/interior/IRE01888.jpg" alt="Eleganz Interior 9">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/eleganz/images/interior/IRE01890.jpg" alt="Eleganz Interior 10">
+                                </div>
+                            </div>
+                            <button class="carousel-arrow prev" aria-label="Previous image">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="carousel-arrow next" aria-label="Next image">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="carousel-dots"></div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="property-section">
+                        <h2 data-i18n="property.keyHighlights">Key Highlights</h2>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Completed & Ready</h4>
+                                    <p>Fully completed and ready for immediate occupancy</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-home"></i>
+                                <div>
+                                    <h4>Premium Finishes</h4>
+                                    <p>High-quality fixtures and modern finishes throughout</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Prime JVC Location</h4>
+                                    <p>Family-friendly community with excellent connectivity</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-building"></i>
+                                <div>
+                                    <h4>Multiple Unit Types</h4>
+                                    <p>1BR, 2BR, Duplexes & Townhouses available</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-car"></i>
+                                <div>
+                                    <h4>Dedicated Parking</h4>
+                                    <p>Secure covered parking for residents</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-tree"></i>
+                                <div>
+                                    <h4>Green Spaces</h4>
+                                    <p>Landscaped gardens and community areas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Available Units -->
+                    <div class="property-section">
+                        <h2 data-i18n="property.availableUnits">Available Units</h2>
+                        <table class="units-table">
+                            <thead>
+                                <tr>
+                                    <th data-i18n="units.unitType">Unit Type</th>
+                                    <th data-i18n="units.size">Size (Sq.Ft)</th>
+                                    <th data-i18n="units.priceFrom">Price From</th>
+                                    <th data-i18n="units.status">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>1 <span data-i18n="units.bedroom">Bedroom</span></strong></td>
+                                    <td>Varies</td>
+                                    <td><strong>Contact for Pricing</strong></td>
+                                    <td><span style="color: green; font-weight: 600;">Ready to Move</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2 <span data-i18n="units.bedroom">Bedroom</span></strong></td>
+                                    <td>Varies</td>
+                                    <td><strong>Contact for Pricing</strong></td>
+                                    <td><span style="color: green; font-weight: 600;">Ready to Move</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2BR Duplex</strong></td>
+                                    <td>Varies</td>
+                                    <td><strong>Contact for Pricing</strong></td>
+                                    <td><span style="color: green; font-weight: 600;">Ready to Move</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Townhouse</strong></td>
+                                    <td>Varies</td>
+                                    <td><strong>Contact for Pricing</strong></td>
+                                    <td><span style="color: green; font-weight: 600;">Ready to Move</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Amenities -->
+                    <div class="property-section">
+                        <h2>Community Amenities</h2>
+                        <p style="margin-bottom: 2rem; font-size: 1.1rem;">Eleganz offers a range of lifestyle amenities designed for comfortable family living:</p>
+
+                        <h3 style="color: var(--primary-navy); margin: 2rem 0 1rem;">Resident Amenities</h3>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <i class="fas fa-swimming-pool"></i>
+                                <div>
+                                    <h4>Infinity Pool & Jacuzzi</h4>
+                                    <p>Breathtaking skyline views</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-child"></i>
+                                <div>
+                                    <h4>Kids Pool & Splash Pad</h4>
+                                    <p>Safe water fun for children</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-dumbbell"></i>
+                                <div>
+                                    <h4>Aquatic Gym</h4>
+                                    <p>Water-based fitness</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-fire"></i>
+                                <div>
+                                    <h4>BBQ Area</h4>
+                                    <p>Outdoor grilling stations</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-baseball-ball"></i>
+                                <div>
+                                    <h4>Cricket Pitch</h4>
+                                    <p>Sports enthusiasts paradise</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-basketball-ball"></i>
+                                <div>
+                                    <h4>Basketball Court</h4>
+                                    <p>Full-size sports court</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-spa"></i>
+                                <div>
+                                    <h4>Wellness Club & Spa</h4>
+                                    <p>Relaxation and rejuvenation</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-cut"></i>
+                                <div>
+                                    <h4>Beauty Salon</h4>
+                                    <p>Professional grooming services</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-baby"></i>
+                                <div>
+                                    <h4>Kids Daycare</h4>
+                                    <p>Safe childcare facilities</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-golf-ball"></i>
+                                <div>
+                                    <h4>Golf Simulator</h4>
+                                    <p>Virtual golf experience</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-gamepad"></i>
+                                <div>
+                                    <h4>Arcade Zone</h4>
+                                    <p>Gaming entertainment</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-running"></i>
+                                <div>
+                                    <h4>Jogging Track</h4>
+                                    <p>Fitness and wellness</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Sidebar (Request Info Section) -->
+                    <div class="property-section">
+                        <div class="property-sidebar" style="position: static; max-width: 500px; margin: 0 auto;">
+                            <div class="price-card">
+                                <h3>Contact for Pricing</h3>
+                                <p class="starting-from">Ready to Move In</p>
+
+                                <div style="background: white; padding: 1rem; border-radius: 6px; margin-bottom: 1.5rem;">
+                                    <p style="font-size: 0.9rem; color: var(--text-gray); margin-bottom: 0.5rem;">Status</p>
+                                    <p style="font-size: 1.1rem; font-weight: 600; color: green;">Completed Project</p>
+                                    <p style="font-size: 0.85rem; color: var(--text-gray); margin-top: 0.5rem;">Immediate Occupancy Available</p>
+                                </div>
+
+                                <div class="contact-btns">
+                                    <a href="contact.html" class="btn btn-primary">
+                                        <i class="fas fa-envelope"></i>
+                                        <span data-i18n="property.requestInfo">Request Info</span>
+                                    </a>
+                                    <a href="https://wa.me/971501234567?text=I'm interested in Eleganz in Jumeirah Village Circle (JVC)" class="btn btn-secondary" target="_blank">
+                                        <i class="fab fa-whatsapp"></i>
+                                        WhatsApp
+                                    </a>
+                                    <a href="tel:+971501234567" class="btn btn-primary">
+                                        <i class="fas fa-phone"></i>
+                                        <span data-i18n="property.callNow">Call Now</span>
+                                    </a>
+                                </div>
+
+                                <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid var(--medium-gray);">
+                                    <p style="font-size: 0.9rem; color: var(--text-gray); margin-bottom: 1rem;">
+                                        <i class="fas fa-info-circle" style="color: var(--gold);"></i>
+                                        <span data-i18n="property.consultantNote">Our real estate consultants are ready to help you find your perfect home.</span>
+                                    </p>
+                                    <div style="margin-top: 1rem; padding: 0.75rem; background: var(--light-gray); border-radius: 4px;">
+                                        <p style="font-size: 0.85rem; color: var(--primary-navy); margin: 0;"><strong>Completed Project</strong><br>Ready to View & Move In Today</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Downloads -->
+                    <div class="property-section">
+                        <h2 data-i18n="property.downloadMaterials">Download Materials</h2>
+                        <div class="download-section">
+                            <a href="media/eleganz/downloads/Eleganz_1bed_floor_plans.pdf" class="download-btn">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>1BR Floor Plans</span>
+                            </a>
+                            <a href="media/eleganz/downloads/Eleganz_2bed_2bhkduplex_floor_plans.pdf" class="download-btn">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>2BR & Duplex Plans</span>
+                            </a>
+                            <a href="media/eleganz/downloads/Eleganz_townhouses_floor_plans.pdf" class="download-btn">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Townhouse Plans</span>
+                            </a>
+                            <a href="media/eleganz/downloads/eleganz-factsheet.pdf" class="download-btn">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Factsheet</span>
+                            </a>
+                            <a href="media/eleganz/downloads/eleganz-brochure.pdf" class="download-btn">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Brochure</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Map -->
+    <section class="location-section">
+        <div class="property-detail-container">
+            <h2 style="margin-bottom: 2rem;">Location</h2>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.8!2d55.205!3d25.055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6d3c8f000001%3A0x1234567890!2sJumeirah%20Village%20Circle%20-%20Dubai!5e0!3m2!1sen!2sae!4v1234567890"
+                    width="100%"
+                    height="450"
+                    style="border:0; border-radius: 8px;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>DUBAI ESTATES</h3>
+                    <p>Your trusted partner in Dubai real estate, providing expert guidance and exceptional service since 2008.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Sheikh Zayed Road, Dubai, UAE</li>
+                        <li><i class="fas fa-phone"></i> +971 50 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@dubaiestates.ae</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dubai Estates. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Download Registration Modal -->
+    <div id="downloadModal" class="download-modal">
+        <div class="download-modal-content">
+            <button class="download-modal-close" aria-label="Close modal">&times;</button>
+
+            <div id="downloadFormContent">
+                <div class="download-modal-header">
+                    <h2>Register Your Interest</h2>
+                    <p>Please provide your information to download the materials</p>
+                </div>
+
+                <form id="downloadForm" class="download-form">
+                    <div class="form-group">
+                        <label for="downloadName">Name*</label>
+                        <input type="text" id="downloadName" name="name" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="downloadEmail">Email*</label>
+                        <input type="email" id="downloadEmail" name="email" placeholder="your.email@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="downloadPhone">Phone*</label>
+                        <div class="phone-input-wrapper">
+                            <select name="countryCode" class="country-code-select" required>
+                                <option value="+971">+971 (UAE)</option>
+                                <option value="+1">+1 (US)</option>
+                                <option value="+44">+44 (UK)</option>
+                                <option value="+91">+91 (India)</option>
+                                <option value="+92">+92 (Pakistan)</option>
+                                <option value="+20">+20 (Egypt)</option>
+                                <option value="+966">+966 (Saudi Arabia)</option>
+                                <option value="+974">+974 (Qatar)</option>
+                                <option value="+965">+965 (Kuwait)</option>
+                                <option value="+973">+973 (Bahrain)</option>
+                                <option value="+968">+968 (Oman)</option>
+                            </select>
+                            <input type="tel" id="downloadPhone" name="phone" placeholder="50 123 4567" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="downloadMessage">Message (Optional)</label>
+                        <textarea id="downloadMessage" name="message" placeholder="Any specific questions or requirements?"></textarea>
+                    </div>
+
+                    <button type="submit" class="download-submit-btn">SUBMIT</button>
+
+                    <p class="form-consent">
+                        By providing my information, I consent to receive property information and agree to the
+                        <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>.
+                    </p>
+                </form>
+            </div>
+
+            <div id="downloadSuccess" class="download-success">
+                <i class="fas fa-check-circle"></i>
+                <h3>Thank You!</h3>
+                <p>Your download will begin shortly. We'll also send the materials to your email.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/property-carousel.js"></script>
+    <script src="js/download-modal.js"></script>
+</body>
+</html>

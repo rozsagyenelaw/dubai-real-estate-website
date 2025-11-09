@@ -365,12 +365,13 @@
 
                     <!-- Image Carousels -->
                     <div class="carousels-grid">
-                        <div class="property-section">
-                            <h2 data-i18n="property.exteriorViews">Exterior Views</h2>
-                                <div class="carousel-container">
-                                <div class="carousel-track-container">
-                                    <div class="carousel-track">
-                                        <div class="carousel-slide">
+                        <div class="carousel-section">
+                            <div class="carousel-header">
+                                <h2 data-i18n="property.exteriorViews">Exterior</h2>
+                            </div>
+                            <div class="carousel-container" id="exteriorCarousel">
+                                <div class="carousel-wrapper">
+                                        <div class="carousel-slide active">
                                             <img src="media/danube/oceanz-tower-2/images/exterior/Oceanz3_exterior_newsky.jpg" alt="Oceanz Tower 2 Exterior">
                                         </div>
                                         <div class="carousel-slide">
@@ -389,23 +390,23 @@
                                             <img src="media/danube/oceanz-tower-2/images/exterior/VIEW 3 A  (1).jpg" alt="Marina View">
                                         </div>
                                     </div>
-                                </div>
-                                <button class="carousel-button carousel-button-left">
+                                <button class="carousel-arrow prev" aria-label="Previous image">
                                     <i class="fas fa-chevron-left"></i>
                                 </button>
-                                <button class="carousel-button carousel-button-right">
+                                <button class="carousel-arrow next" aria-label="Next image">
                                     <i class="fas fa-chevron-right"></i>
                                 </button>
-                                <div class="carousel-nav"></div>
+                                <div class="carousel-dots"></div>
                             </div>
                         </div>
 
-                        <div class="property-section">
-                            <h2 style="margin-top: 3rem;" data-i18n="property.interiorSpaces">Interior & Amenities</h2>
-                                <div class="carousel-container">
-                                <div class="carousel-track-container">
-                                    <div class="carousel-track">
-                                        <div class="carousel-slide">
+                        <div class="carousel-section">
+                            <div class="carousel-header">
+                                <h2 data-i18n="property.interiorSpaces">Interior</h2>
+                            </div>
+                            <div class="carousel-container" id="interiorCarousel">
+                                <div class="carousel-wrapper">
+                                        <div class="carousel-slide active">
                                             <img src="media/danube/oceanz-tower-2/images/interior/Living_room.jpg" alt="Living Room">
                                         </div>
                                         <div class="carousel-slide">
@@ -442,14 +443,13 @@
                                             <img src="media/danube/oceanz-tower-2/images/amenities/2.jpg" alt="Pool Deck">
                                         </div>
                                     </div>
-                                </div>
-                                <button class="carousel-button carousel-button-left">
+                                <button class="carousel-arrow prev" aria-label="Previous image">
                                     <i class="fas fa-chevron-left"></i>
                                 </button>
-                                <button class="carousel-button carousel-button-right">
+                                <button class="carousel-arrow next" aria-label="Next image">
                                     <i class="fas fa-chevron-right"></i>
                                 </button>
-                                <div class="carousel-nav"></div>
+                                <div class="carousel-dots"></div>
                             </div>
                         </div>
                     </div>

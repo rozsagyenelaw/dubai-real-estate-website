@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Dubai Estates - Get in touch with our expert team for all your Dubai real estate needs.">
-    <title>Contact Us | Dubai Estates</title>
+    <meta name="description" content="Contact Premier Dubai Realty - Get in touch with our expert team for all your Dubai real estate needs.">
+    <title>Contact Us | Premier Dubai Realty</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -14,7 +14,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <h1>DUBAI ESTATES</h1>
+                <h1>PREMIER DUBAI REALTY</h1>
                 <p class="tagline">Your Trusted Real Estate Partner in Dubai</p>
             </div>
             <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
@@ -75,7 +75,7 @@
                             <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                             <div class="contact-text">
                                 <h4>Email Us</h4>
-                                <p><a href="mailto:info@dubaiestates.ae">info@dubaiestates.ae</a></p>
+                                <p><a href="mailto:info@premierdubairealty.com">info@premierdubairealty.com</a></p>
                             </div>
                         </div>
 
@@ -102,7 +102,13 @@
 
                 <div class="contact-form-container">
                     <h2>Send Us a Message</h2>
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <!-- Netlify bot field for spam protection -->
+                        <input type="hidden" name="form-name" value="contact">
+                        <div style="display:none;">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </div>
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Full Name *</label>
@@ -172,7 +178,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>DUBAI ESTATES</h3>
+                    <h3>PREMIER DUBAI REALTY</h3>
                     <p>Your trusted real estate partner in Dubai, helping you find the perfect property since 2009.</p>
                     <div class="social-links">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
@@ -207,13 +213,13 @@
                     <ul class="contact-info">
                         <li><i class="fas fa-map-marker-alt"></i> Sheikh Zayed Road, Dubai, UAE</li>
                         <li><i class="fas fa-phone"></i> +1 (818) 434-4541</li>
-                        <li><i class="fas fa-envelope"></i> info@dubaiestates.ae</li>
+                        <li><i class="fas fa-envelope"></i> info@premierdubairealty.com</li>
                         <li><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</li>
                                     <li><button id="langToggle" class="lang-toggle">العربية</button></li>
             </ul>
                 </div>
             </div>
-            <div class="footer-bottom"><p>&copy; 2024 Dubai Estates. All rights reserved.</p></div>
+            <div class="footer-bottom"><p>&copy; 2024 Premier Dubai Realty. All rights reserved.</p></div>
         </div>
     </footer>
     <script src="js/translations.js"></script>

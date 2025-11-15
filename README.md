@@ -34,7 +34,7 @@ A professional, modern real estate broker website for Dubai properties.
 
 - Update company name in all HTML files
 - Replace phone number (+971 50 123 4567) with your actual number
-- Replace email (info@dubaiestates.ae) with your actual email
+- Replace email (info@premierdubairealty.com) with your actual email
 - Add real property images in `/images` folder
 - Update property data in `js/properties.js` and `js/main.js`
 - Customize colors in `css/style.css` (see CSS variables at top)

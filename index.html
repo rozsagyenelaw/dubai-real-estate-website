@@ -19,7 +19,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <h1>DUBAI ESTATES</h1>
+                <h1>PREMIER DUBAI REALTY</h1>
                 <p class="tagline">Your Trusted Real Estate Partner in Dubai</p>
             </div>
             <button class="nav-toggle" aria-label="Toggle navigation">
@@ -337,8 +337,12 @@
             <div class="newsletter-content">
                 <h2>Stay Updated on New Listings</h2>
                 <p>Subscribe to receive the latest properties and market insights directly to your inbox</p>
-                <form class="newsletter-form" id="newsletterForm">
-                    <input type="email" placeholder="Enter your email address" required>
+                <form class="newsletter-form" id="newsletterForm" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="newsletter">
+                    <div style="display:none;">
+                        <label>Don't fill this out: <input name="bot-field" /></label>
+                    </div>
+                    <input type="email" name="email" placeholder="Enter your email address" required>
                     <button type="submit" class="btn-primary">Subscribe</button>
                 </form>
             </div>
@@ -364,7 +368,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>DUBAI ESTATES</h3>
+                    <h3>PREMIER DUBAI REALTY</h3>
                     <p>Your trusted real estate partner in Dubai, helping you find the perfect property since 2009.</p>
                     <div class="social-links">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
@@ -400,14 +404,14 @@
                     <ul class="contact-info">
                         <li><i class="fas fa-map-marker-alt"></i> Sheikh Zayed Road, Dubai, UAE</li>
                         <li><i class="fas fa-phone"></i> +1 (818) 434-4541</li>
-                        <li><i class="fas fa-envelope"></i> info@dubaiestates.ae</li>
+                        <li><i class="fas fa-envelope"></i> info@premierdubairealty.com</li>
                         <li><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 Dubai Estates. All rights reserved.</p>
+                <p>&copy; 2024 Premier Dubai Realty. All rights reserved.</p>
             </div>
         </div>
     </footer>

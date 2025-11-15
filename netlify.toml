@@ -1,0 +1,32 @@
+# Netlify Configuration for Premier Dubai Realty
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# Redirect API calls to Netlify Functions
+[[redirects]]
+  from = "/api/contact"
+  to = "/.netlify/functions/contact-handler"
+  status = 200
+
+[[redirects]]
+  from = "/api/download-request"
+  to = "/.netlify/functions/download-handler"
+  status = 200
+
+[[redirects]]
+  from = "/api/newsletter"
+  to = "/.netlify/functions/newsletter-handler"
+  status = 200
+
+# Form settings
+[build.environment]
+  NODE_VERSION = "18"
+
+# Headers for security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"

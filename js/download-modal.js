@@ -1,4 +1,4 @@
-// Download Modal Handler
+// Download Modal Handler for Netlify
 class DownloadModal {
     constructor() {
         this.modal = document.getElementById('downloadModal');
@@ -8,6 +8,7 @@ class DownloadModal {
         this.closeBtn = document.querySelector('.download-modal-close');
         this.downloadUrl = '';
         this.downloadName = '';
+        this.hiddenPropertyField = null;
 
         this.init();
     }
@@ -64,6 +65,15 @@ class DownloadModal {
             if (modalTitle) {
                 modalTitle.textContent = `Please provide your information to download ${this.downloadName}`;
             }
+
+            // Add/update hidden field for property name
+            if (!this.hiddenPropertyField) {
+                this.hiddenPropertyField = document.createElement('input');
+                this.hiddenPropertyField.type = 'hidden';
+                this.hiddenPropertyField.name = 'property';
+                this.form.insertBefore(this.hiddenPropertyField, this.form.firstChild);
+            }
+            this.hiddenPropertyField.value = this.downloadName;
         }
     }
 
@@ -83,62 +93,46 @@ class DownloadModal {
 
     async handleSubmit() {
         const submitBtn = this.form.querySelector('.download-submit-btn');
-        const formData = new FormData(this.form);
 
         // Disable submit button
         submitBtn.disabled = true;
         submitBtn.textContent = 'SUBMITTING...';
 
-        // Get form values
-        const data = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            phone: formData.get('phone'),
-            countryCode: formData.get('countryCode'),
-            message: formData.get('message'),
-            downloadRequested: this.downloadName,
-            downloadUrl: this.downloadUrl,
-            timestamp: new Date().toISOString()
-        };
-
         try {
-            // Here you would normally send to your backend
-            // For now, we'll simulate success and trigger download
-            await this.simulateSubmission(data);
+            // Submit to Netlify Function
+            const formData = new FormData(this.form);
+            const data = Object.fromEntries(formData);
 
-            // Show success message
-            this.showSuccess();
+            // Add property and download URL
+            data.property = this.downloadName;
+            data.downloadUrl = this.downloadUrl;
 
-            // Trigger download after showing success
-            setTimeout(() => {
-                this.triggerDownload();
-                // Auto-close modal after 3 seconds
-                setTimeout(() => this.hide(), 3000);
-            }, 1500);
+            const response = await fetch('/api/download-request', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                // Show success message
+                this.showSuccess();
+
+                // Trigger download after showing success
+                setTimeout(() => {
+                    this.triggerDownload();
+                    // Auto-close modal after 3 seconds
+                    setTimeout(() => this.hide(), 3000);
+                }, 1500);
+            } else {
+                throw new Error('Failed to submit request');
+            }
 
         } catch (error) {
             console.error('Form submission error:', error);
-            alert('There was an error submitting your request. Please try again.');
+            alert('There was an error submitting your request. Please try again or contact us at info@premierdubairealty.com');
             submitBtn.disabled = false;
             submitBtn.textContent = 'SUBMIT';
         }
-    }
-
-    async simulateSubmission(data) {
-        // Simulate API call
-        return new Promise((resolve) => {
-            // Log to console (in production, send to your backend)
-            console.log('Download request submitted:', data);
-
-            // You can also send this to a backend API:
-            // await fetch('/api/download-requests', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify(data)
-            // });
-
-            setTimeout(resolve, 1000);
-        });
     }
 
     showSuccess() {

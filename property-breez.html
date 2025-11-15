@@ -265,7 +265,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <h1>DUBAI ESTATES</h1>
+                <h1>PREMIER DUBAI REALTY</h1>
                 <p class="tagline">Your Trusted Real Estate Partner in Dubai</p>
             </div>
             <button class="nav-toggle" aria-label="Toggle navigation">
@@ -806,7 +806,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>DUBAI ESTATES</h3>
+                    <h3>PREMIER DUBAI REALTY</h3>
                     <p>Your trusted partner in Dubai real estate, providing expert guidance and exceptional service since 2008.</p>
                 </div>
                 <div class="footer-col">
@@ -823,14 +823,14 @@
                     <ul class="contact-info">
                         <li><i class="fas fa-map-marker-alt"></i> Sheikh Zayed Road, Dubai, UAE</li>
                         <li><i class="fas fa-phone"></i> +1 (818) 434-4541</li>
-                        <li><i class="fas fa-envelope"></i> info@dubaiestates.ae</li>
+                        <li><i class="fas fa-envelope"></i> info@premierdubairealty.com</li>
                         <li><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 Dubai Estates. All rights reserved.</p>
+                <p>&copy; 2024 Premier Dubai Realty. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -846,7 +846,12 @@
                     <p>Please provide your information to download the materials</p>
                 </div>
 
-                <form id="downloadForm" class="download-form">
+                <form id="downloadForm" class="download-form" name="download-request" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="download-request">
+                    <div style="display:none;">
+                        <label>Don't fill this out: <input name="bot-field" /></label>
+                    </div>
+
                     <div class="form-group">
                         <label for="downloadName">Name*</label>
                         <input type="text" id="downloadName" name="name" placeholder="Your Name" required>

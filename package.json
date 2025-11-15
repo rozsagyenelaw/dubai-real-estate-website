@@ -1,0 +1,16 @@
+{
+  "name": "premier-dubai-realty-website",
+  "version": "1.0.0",
+  "description": "Premier Dubai Realty - Professional Real Estate Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.7"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}

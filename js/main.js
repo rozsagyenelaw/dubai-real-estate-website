@@ -73,38 +73,11 @@ if (testimonialCards.length > 0) {
 const newsletterForm = document.getElementById('newsletterForm');
 
 if (newsletterForm) {
-    newsletterForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
+    newsletterForm.addEventListener('submit', () => {
+        // Let Netlify handle the form submission and redirect to thank-you.html
         const submitBtn = newsletterForm.querySelector('button[type="submit"]');
-        const emailInput = newsletterForm.querySelector('input[name="email"]');
-        const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Subscribing...';
         submitBtn.disabled = true;
-
-        try {
-            // Submit to Netlify Forms
-            const formData = new FormData(newsletterForm);
-
-            const response = await fetch('/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams(formData).toString()
-            });
-
-            if (response.ok) {
-                alert(`Thank you for subscribing! We'll send property updates to ${emailInput.value}`);
-                newsletterForm.reset();
-            } else {
-                throw new Error('Failed to subscribe');
-            }
-        } catch (error) {
-            console.error('Newsletter error:', error);
-            alert('An error occurred. Please try again or contact us at info@premierdubairealty.com');
-        } finally {
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }
     });
 }
 

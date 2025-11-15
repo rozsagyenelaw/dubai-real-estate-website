@@ -2,8 +2,8 @@ const contactForm = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        // Let Netlify handle the form submission naturally
+    contactForm.addEventListener('submit', () => {
+        // Let Netlify handle the form submission and redirect to thank-you.html
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;

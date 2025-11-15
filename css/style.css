@@ -69,13 +69,29 @@ ul {
     padding: 1rem 20px;
 }
 
-.nav-brand h1 {
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-brand-logo {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.nav-brand-logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-brand-text h1 {
     font-size: 1.8rem;
     color: var(--primary-navy);
     letter-spacing: 2px;
 }
 
-.nav-brand .tagline {
+.nav-brand-text .tagline {
     font-size: 0.75rem;
     color: var(--gold);
     margin-top: -5px;
@@ -1261,6 +1277,18 @@ ul {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+    .nav-brand-logo {
+        height: 40px;
+    }
+
+    .nav-brand-text h1 {
+        font-size: 1.2rem;
+    }
+
+    .nav-brand-text .tagline {
+        font-size: 0.65rem;
+    }
+
     .nav-toggle {
         display: flex;
     }

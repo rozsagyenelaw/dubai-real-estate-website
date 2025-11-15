@@ -308,11 +308,13 @@ ul {
 
 /* ===== HERO SECTION ===== */
 .hero {
-    height: 650px;
+    height: 100vh;
     text-align: center;
     color: white;
-    position: relative;
+    position: sticky;
+    top: 0;
     overflow: hidden;
+    z-index: 1;
 }
 
 .hero-slider {
@@ -534,6 +536,9 @@ ul {
 /* ===== ABOUT PREVIEW ===== */
 .about-preview {
     padding: 5rem 0;
+    position: relative;
+    z-index: 10;
+    background: var(--white);
 }
 
 .about-grid {
@@ -580,6 +585,8 @@ ul {
 .properties-listing {
     padding: 5rem 0;
     background: var(--light-gray);
+    position: relative;
+    z-index: 10;
 }
 
 .property-grid {
@@ -682,6 +689,9 @@ ul {
 /* ===== WHY CHOOSE US ===== */
 .why-choose {
     padding: 5rem 0;
+    position: relative;
+    z-index: 10;
+    background: var(--white);
 }
 
 .features-grid {
@@ -724,6 +734,9 @@ ul {
 .communities-preview,
 .communities-listing {
     padding: 5rem 0;
+    position: relative;
+    z-index: 10;
+    background: var(--white);
 }
 
 .communities-grid {
@@ -804,6 +817,8 @@ ul {
 .testimonials {
     padding: 5rem 0;
     background: var(--light-gray);
+    position: relative;
+    z-index: 10;
 }
 
 .testimonials-slider {
@@ -872,6 +887,8 @@ ul {
     background: var(--primary-navy);
     color: white;
     padding: 4rem 0;
+    position: relative;
+    z-index: 10;
 }
 
 .newsletter-content {
@@ -904,6 +921,8 @@ ul {
     color: white;
     padding: 5rem 0;
     text-align: center;
+    position: relative;
+    z-index: 10;
 }
 
 .cta-content h2 {
@@ -1337,6 +1356,8 @@ ul {
     background: var(--primary-navy);
     color: white;
     padding: 4rem 0 1rem;
+    position: relative;
+    z-index: 10;
 }
 
 .footer-grid {

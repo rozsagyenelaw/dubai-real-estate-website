@@ -309,9 +309,6 @@ ul {
 /* ===== HERO SECTION ===== */
 .hero {
     height: 650px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     color: white;
     position: relative;
@@ -356,15 +353,19 @@ ul {
 .hero-content {
     max-width: 900px;
     padding: 0 20px;
-    position: relative;
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 2;
 }
 
 .hero-content h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
-    font-weight: 300;
-    letter-spacing: 1px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     animation: fadeInUp 0.8s ease;
 }
 

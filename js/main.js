@@ -23,21 +23,48 @@ if (navToggle) {
     });
 }
 
+// ===== HERO MOBILE NAVIGATION =====
+const heroNavToggle = document.querySelector('.hero-nav-toggle');
+const heroNavMenu = document.querySelector('.hero-nav-menu');
+
+if (heroNavToggle) {
+    heroNavToggle.addEventListener('click', () => {
+        heroNavMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!heroNavToggle.contains(e.target) && !heroNavMenu.contains(e.target)) {
+            heroNavMenu.classList.remove('active');
+        }
+    });
+
+    // Close menu when clicking a link
+    const heroNavLinks = document.querySelectorAll('.hero-nav-menu a');
+    heroNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            heroNavMenu.classList.remove('active');
+        });
+    });
+}
+
 // ===== STICKY NAVBAR =====
 let lastScroll = 0;
 const navbar = document.querySelector('.navbar');
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-    } else {
-        navbar.style.boxShadow = '0 4px 6px rgba(0,0,0,0.07)';
-    }
-    
-    lastScroll = currentScroll;
-});
+if (navbar) {
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > 100) {
+            navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+        } else {
+            navbar.style.boxShadow = '0 4px 6px rgba(0,0,0,0.07)';
+        }
+
+        lastScroll = currentScroll;
+    });
+}
 
 // ===== TESTIMONIALS SLIDER =====
 const testimonialCards = document.querySelectorAll('.testimonial-card');

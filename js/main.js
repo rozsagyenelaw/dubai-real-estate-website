@@ -77,23 +77,22 @@ if (newsletterForm) {
         e.preventDefault();
 
         const submitBtn = newsletterForm.querySelector('button[type="submit"]');
+        const emailInput = newsletterForm.querySelector('input[name="email"]');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Subscribing...';
         submitBtn.disabled = true;
 
         try {
-            // Submit to Netlify Function
+            // Submit to Netlify Forms
             const formData = new FormData(newsletterForm);
-            const data = Object.fromEntries(formData);
 
-            const response = await fetch('/api/newsletter', {
+            const response = await fetch('/', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
             });
 
             if (response.ok) {
-                const emailInput = newsletterForm.querySelector('input[name="email"]');
                 alert(`Thank you for subscribing! We'll send property updates to ${emailInput.value}`);
                 newsletterForm.reset();
             } else {

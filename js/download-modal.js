@@ -99,18 +99,16 @@ class DownloadModal {
         submitBtn.textContent = 'SUBMITTING...';
 
         try {
-            // Submit to Netlify Function
+            // Submit to Netlify Forms
             const formData = new FormData(this.form);
-            const data = Object.fromEntries(formData);
 
-            // Add property and download URL
-            data.property = this.downloadName;
-            data.downloadUrl = this.downloadUrl;
+            // Add property name to form data
+            formData.set('property', this.downloadName);
 
-            const response = await fetch('/api/download-request', {
+            const response = await fetch('/', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
             });
 
             if (response.ok) {
